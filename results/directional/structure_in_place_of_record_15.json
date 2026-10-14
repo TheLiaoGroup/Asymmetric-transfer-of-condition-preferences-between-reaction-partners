@@ -1,0 +1,101 @@
+{
+ "rule_sha256": "2baccbbea130ce72a92a0568b3e952ff3aae33888bf465c5ee2c469c363a5137",
+ "arrays_regimes": 15,
+ "arrays_association": 14,
+ "restated_15": {
+  "regimes": {
+   "p_oof_centred": {
+    "warm/warm": {
+     "n_arrays": 15,
+     "n_unique_pairs": 1612,
+     "n_records": 7553,
+     "median_r2_amplitude": 0.3466457323387274,
+     "median_r2_preference": 0.1165730318056471,
+     "mean": [
+      2.884976649222524,
+      1.7870795586701989,
+      4.5956155758711414
+     ],
+     "greedy": [
+      1.9363009142446448,
+      1.062204061001289,
+      3.09196913017932
+     ]
+    },
+    "new/known": {
+     "n_arrays": 15,
+     "n_unique_pairs": 1854,
+     "n_records": 8767,
+     "median_r2_amplitude": 0.2754883118190921,
+     "median_r2_preference": 0.065846921189126,
+     "mean": [
+      1.9415629866731912,
+      1.2443687724222507,
+      3.100186890038331
+     ],
+     "greedy": [
+      1.2908117731650226,
+      0.7995049337851277,
+      2.100914573794009
+     ]
+    },
+    "known/new": {
+     "n_arrays": 15,
+     "n_unique_pairs": 1843,
+     "n_records": 8541,
+     "median_r2_amplitude": 0.2211567541821418,
+     "median_r2_preference": 0.0460317550745603,
+     "mean": [
+      1.4259330981994562,
+      0.5143206667873852,
+      2.6283028865616846
+     ],
+     "greedy": [
+      0.8812884464560996,
+      -0.013831194616666473,
+      1.9879154893398965
+     ]
+    },
+    "new/new": {
+     "n_arrays": 15,
+     "n_unique_pairs": 2087,
+     "n_records": 9851,
+     "median_r2_amplitude": 0.0826464051843421,
+     "median_r2_preference": 0.0031912560654783,
+     "mean": [
+      0.34026431563142523,
+      -0.17220486829535628,
+      1.010851665776758
+     ],
+     "greedy": [
+      0.07249859534841625,
+      -0.6866450766064096,
+      0.9929285593809428
+     ]
+    }
+   }
+  },
+  "association": {
+   "n_arrays": 14,
+   "median_rho": 0.15939656498865,
+   "n_positive": 14,
+   "n_q05": 14,
+   "median_rho_no_shared": 0.09329826307241659,
+   "n_positive_no_shared": 14,
+   "preference": {
+    "median_rho": 0.15778089121882255,
+    "n_positive": 14,
+    "n_q05": 14,
+    "median_rho_no_shared": 0.0667301605979886,
+    "n_positive_no_shared": 14
+   },
+   "preference_c": {
+    "median_rho": 0.11716457986521744,
+    "n_positive": 14,
+    "n_q05": 13,
+    "median_rho_no_shared": 0.04891583581286565,
+    "n_positive_no_shared": 13
+   }
+  }
+ }
+}

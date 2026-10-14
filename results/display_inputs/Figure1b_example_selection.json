@@ -1,0 +1,20 @@
+{
+  "screen": "Acylation|1",
+  "role": "1",
+  "shared_molecule": "CNOC",
+  "shared_partners": [
+    "O=C(O)c1ccco1",
+    "O=C(O)c1ccc(Br)s1",
+    "Cc1ccc(F)cc1C(=O)O",
+    "N#Cc1ccc(C(=O)O)cc1"
+  ],
+  "unrelated_pairs": [
+    "CCCCN1CCNCC1 >> COc1ccc(C(=O)O)cc1",
+    "Cc1cc(N)ccn1 >> O=C(O)C1CCN(C(=O)OCc2ccccc2)CC1",
+    "COc1ccc(N)cc1 >> Cn1cc(C(=O)O)c(C(F)F)n1",
+    "C[C@H](N)c1cccc2ccccc12 >> O=C(O)Cc1ccc2c(c1)OCO2"
+  ],
+  "mean_r_shared": 0.6030382674068328,
+  "mean_r_unrelated": 0.014018216847333518,
+  "rule": "Fixed rule: the array with most product-forming pairs; the larger-share role; its molecule with most fully measured product-forming partners (then fewest heavy atoms, SMILES); four such partners\n(fewest heavy atoms); four comparison pairs: fully measured product-forming pairs containing neither the shared molecule nor any of its four partners, in order of the SHA-256 of the pair identifier, each kept only if it shares no molecule with a pair already kept (2026-10-13)."
+}

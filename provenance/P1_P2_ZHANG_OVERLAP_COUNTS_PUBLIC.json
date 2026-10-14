@@ -1,0 +1,95 @@
+{
+ "rule": {
+  "version": "PROV-1+A2",
+  "text": "07_METHODS_AND_PROVENANCE/provenance_public/PROV-1+A2_PUBLIC_RULE.md",
+  "text_sha256": "a540a5d8bd436c35996a4edd5a360efbaf5b93db909e7ca3bc700139e989e837",
+  "history": "PROV-1 was frozen before counting; Amendment 2 was adopted after the first PROV-1 run to correct two documented mechanical matching defects; the final counts use PROV-1+A2"
+ },
+ "environment": {
+  "python": "3.13.3",
+  "pandas": "2.2.3",
+  "numpy": "2.2.5",
+  "rdkit": "2025.03.2"
+ },
+ "inputs": {
+  "P2": {
+   "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "05_DATA/Validation_Set_A/never_analysed_reserve.csv.gz": "b756d8fa324e884c56a5ec8a8c7085fd6c6f7309a38bb4610719c915008b3afb",
+   "05_DATA/Validation_Set_B/never_opened_cross_library.csv.gz": "58b76fbd433ae818c862670c203d4546fff10fd1382412a2a554fba9470668a6",
+   "05_DATA/Results/reserve_validation/record_transfer_losses.csv": "2f2e8316e629f92fb49ef940c5c696cf3f58bcd7ac0dbde300cd8c245b243b61",
+   "05_DATA/Results/reserve_validation/decision_targets.csv": "4c0f17d77f24444aa601db14d7272061392f200c43846d3c0fead21ddde9989a"
+  },
+  "condition_dictionary": {
+   "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_conditions.csv.gz": "c8ce0201734e1542da99ebda11d40541abf4942ea32cd0e0b49c97762f0c4430"
+  },
+  "role_table": {
+   "06_CODE/Core/00_common/ctb/history.py": "998abd201a8dfcf97a3716feb13279b8962ca8e212f97b67ca3693ac71beab86"
+  },
+  "P1": {
+   "data/experimental_wells.csv": "8c281680428b4d6ebbea88dc36683b50f80fa3ed0de19afe52034b458b6540c3",
+   "metadata/base_condition_roles.csv": "713d3046a20ec2c1ede66714f2095423b6b844751662243f513262631d057f44",
+   "metadata/extended_conditions.csv": "114aead7c97ccdc302388244829dcac6591dc3bbedd53ed0d4c40c0878787d74"
+  },
+  "Zhang": {
+   "repository": "github.com/aichemeco/amide_coupling",
+   "commit": "f6fdbe283fc24af53389aab8dcba5e46386ac9c0",
+   "path": "data/all_HTE_with_condition.csv",
+   "git_blob": "778db5176ed6a1b3b11cbb80da4eacbd40ea74c5",
+   "bytes": 17657403,
+   "sha256": "5085e1ae50ee26173bd170a4b10a99c4e3101a46b706d115e425aff17c091b41",
+   "citation": "Zhang, C. et al. Chem. Sci. 16, 11809-11822 (2025). doi:10.1039/d5sc03364k"
+  },
+  "P4": {
+   "output/p4_raw_20261008/R0.csv.gz": "390ab03c7029f0f9f107be84dcf320875b0962a35e6d9b7410ca3ec61acefbd7",
+   "output/p4_all_reactions_20261008/sources/C-O_competitive_reactions/model_input.csv.gz": "467d681a34998750e72cad9afd1d71000b3e19a7c51e738815666609b657fdd2",
+   "output/p4_all_reactions_20261008/sources/Chan-Lam/model_input.csv.gz": "0bce31f7de8b60713c7f814bb2a973f7d14d1781ee8f27336cbead0590b0ee4d",
+   "output/p4_all_reactions_20261008/sources/Esterification/model_input.csv.gz": "359e8fcbc3cae9fc34392743e8ede9f612ba025264357c431406650f971e7854",
+   "output/p4_all_reactions_20261008/sources/Grignard/model_input.csv.gz": "b32724d2e6fadcfd6c8f7acd919f6ec9cef4233f8f34437d9568cfa9f01303c4",
+   "output/p4_all_reactions_20261008/sources/Heck/model_input.csv.gz": "6d8cdb677b79f1805c6ca7daa73507c1d126e673a32eef657771e6b2b6a10f46",
+   "output/p4_all_reactions_20261008/sources/Hiyama/model_input.csv.gz": "c9753c595efea3796ce67337ce296b69a5fab99787bc84ddbd4a31904489bf08",
+   "output/p4_all_reactions_20261008/sources/Kumada/model_input.csv.gz": "2d431958bc49d322f1ff010c1a28cae1f46ac7fc85fe621ad4cafa34144d6f25",
+   "output/p4_all_reactions_20261008/sources/Reductive-amination/model_input.csv.gz": "b4014ffbe7a146b5d9c2874d30cc1246de84b38bd0e44a51c769a6731a81a30a",
+   "output/p4_all_reactions_20261008/sources/SNAr/model_input.csv.gz": "da465217b952403b0c762e1d73fec900fcbabc1fb5d14ab0465e3f1993d005e9",
+   "output/p4_all_reactions_20261008/sources/Sonogashira/model_input.csv.gz": "0120447084dac5c1b8a9c29ef2d63a3a1179fd794a131c04bd4cf95b9cbf2070",
+   "output/p4_all_reactions_20261008/sources/Ullmann/model_input.csv.gz": "f041de81aa9454670eca48f6276b2e3ca7cd7ebf3dfd50970f3298a3bfd5e0cf"
+  }
+ },
+ "records": {
+  "P2": 244436,
+  "P1": 165131,
+  "Zhang": 47015
+ },
+ "venn_regions": {
+  "P1 only": 52801,
+  "P2 only": 109892,
+  "Zhang only": 4228,
+  "P1 ∩ P2 only": 91873,
+  "P1 ∩ Zhang only": 116,
+  "P2 ∩ Zhang only": 22330,
+  "P1 ∩ P2 ∩ Zhang": 20341
+ },
+ "p2_disclosure_counts": {
+  "P2": 244436,
+  "P2 ∩ P1": 112214,
+  "P2 ∩ Zhang": 42671,
+  "P2 ∩ P1 ∩ Zhang": 20341,
+  "P2 ∩ (P1 ∪ Zhang)": 134544,
+  "P2 \\ (P1 ∪ Zhang)": 109892
+ },
+ "p4": {
+  "identifier": "p4_row_uid, not part of PROV-1+A2: library, condition label, unordered canonical partners, yield as PROV-1+A2 rounds it; one to one in released order",
+  "p4_records_read": 323904,
+  "p4_screens_read": "the screens whose reaction is a library of this release",
+  "p2_with_p4_row_uid": 244436,
+  "p2_without": 0
+ },
+ "cross_check": {
+  "regions_key_by_key_equal_regions_position_by_position": true,
+  "per_record_flags_reproduce_every_p2_count": true,
+  "yield_guard": {
+   "record_pairs_joined_by_the_two_stage_rounding": 255,
+   "max_abs_stored_yield_difference": 4.955400534356613e-10,
+   "threshold": 1e-09
+  }
+ }
+}

@@ -1,0 +1,14 @@
+claim_id,section,statement
+T01,Methods,"The fifteen arrays hold 177,308 numeric yield measurements of 2,210 substrate pairs built from 795 distinct molecular structures, 97.9% of the 181,161 cells of their pair-by-condition grids."
+T02,Methods,"A further 384 designed cells carry no numeric yield, and 74 measurements are the second copy of one duplicated Hiyama condition"
+T03,Methods,These records include 90 that carry an inherited quality-check flag
+T04,Methods,"Over 74 substrate pairs the two copies correlate at r = 0.95 on raw yield; on the slope-adjusted condition pattern their agreement, the mean product of the two copies divided by their mean square, is 0.67 (Pearson r = 0.72)"
+T05,Data availability,"The release comprises 244,436 numeric yield measurements: 177,308 from the fifteen arrays, 74 from the duplicated Hiyama condition, 36,498 from 420 pairs of Set A and 30,556 from 535 pairs of Set B."
+T06,Data availability,a mask of the 384 designed cells without a yield
+T07,Data availability,"the 1,192 conditions and 401 reagent entries these records use"
+T08,Data availability,the list of all 442 pairs fixed for Set A
+T09,Data availability,"Of the 244,436 measurements, 42,671 also occur in the amide-coupling collection of Zhang"
+T10,Data availability,"All 244,436 are records of the dataset released with a study of yield prediction across reaction screens³¹"
+T11,Data availability,"and 112,214 also occur in another released dataset³²"
+T12,Methods,"Excluding those 124 documented pairs left 411 pairs and gave D = 0.098 (0.061–0.134 under owner-cluster resampling; 0.079–0.110 under whole-array resampling), with 11 of 13 arrays positive"
+T13,Methods,"For Set B, 124 of the 535 pairs (4,912 measurements) had documented prior pair-level scoring exposure, including 84 with single-role losses."

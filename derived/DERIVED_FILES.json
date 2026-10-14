@@ -1,0 +1,56 @@
+{
+ "derived/DATASET_analysis.csv.gz": {
+  "inputs": {
+   "data/measurements_A1_analysis_arrays.csv.gz": "af6cb65fdcb66cc6411d25d0d9340ee0e69ce50bde38700a380b1c56213f3e44",
+   "data/measurements_A3_hiyama_duplicate.csv.gz": "4309dc14a1be9489d62ea97fb0cc9b651adf93f0f166777be27d1233c101da9d",
+   "data/conditions.csv": "bfe80d9b789538ad24941d4ed81a21373b94da86df11de84ab2c2db57d5323db"
+  },
+  "transformation": "the A1 records in file order, then the A3 records in file order; each record also carries its condition's reagent, solvent, temperature and time identifiers from data/conditions.csv (joined on rxn_class and condition_id)",
+  "rows": 177382,
+  "sha256": "0ea7e419f66ebbc82abd91abb95d745e4626b89b1a1584858f7e755b6a0e2b11",
+  "content_sha256": "e3178227d500b3926f4c28ee53744ed844539843bde6d106530b9e473c454e8b",
+  "read_at": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+  "locked_provenance_sha256": [
+   "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2"
+  ]
+ },
+ "derived/set_A_analysis_format.csv.gz": {
+  "inputs": {
+   "data/measurements_SA1_set_A.csv.gz": "9b17106a59bb66c03e0838a606683adaea05d333157ee91aa15850635813e3f8",
+   "data/conditions.csv": "bfe80d9b789538ad24941d4ed81a21373b94da86df11de84ab2c2db57d5323db"
+  },
+  "transformation": "the SA1 records in file order; each record also carries its condition's reagent, solvent, temperature and time identifiers from data/conditions.csv (joined on rxn_class and condition_id)",
+  "rows": 36498,
+  "sha256": "fba2381980bee59568341f4c4ddd4f3240dc20a272e7a86ce7082277e7576777",
+  "content_sha256": "235472bd5d5352f09d75cbc95bed39b5c5beb8d03e121f35915b4b49383ead11",
+  "read_at": "05_DATA/Validation_Set_A/never_analysed_reserve.csv.gz",
+  "locked_provenance_sha256": [
+   "b756d8fa324e884c56a5ec8a8c7085fd6c6f7309a38bb4610719c915008b3afb"
+  ]
+ },
+ "derived/set_B_analysis_format.csv.gz": {
+  "inputs": {
+   "data/measurements_SB1_set_B.csv.gz": "102f04846d638d10b40ac3c7542d08d5a1cfd7057bff0fdbf842be56cc788461",
+   "data/conditions.csv": "bfe80d9b789538ad24941d4ed81a21373b94da86df11de84ab2c2db57d5323db"
+  },
+  "transformation": "the SB1 records in file order; each record also carries its condition's reagent, solvent, temperature and time identifiers from data/conditions.csv (joined on rxn_class and condition_id)",
+  "rows": 30556,
+  "sha256": "b0721b55e712ebf53715af9fbe6f80dee3d5b617083dc235169802a716624683",
+  "content_sha256": "d96e228cd1299c1148fae87026c5309171efe6f4b96652fd0f55f07ce215e7fe",
+  "read_at": "05_DATA/Validation_Set_B/never_opened_cross_library.csv.gz",
+  "locked_provenance_sha256": [
+   "58b76fbd433ae818c862670c203d4546fff10fd1382412a2a554fba9470668a6"
+  ]
+ },
+ "derived/DATASET_conditions.csv.gz": {
+  "inputs": {
+   "data/conditions.csv": "bfe80d9b789538ad24941d4ed81a21373b94da86df11de84ab2c2db57d5323db"
+  },
+  "transformation": "data/conditions.csv unchanged, gzip-compressed (read by the provenance script)",
+  "rows": 1192,
+  "sha256": "c21219aaee3e3fcf21e0aa513aeaca62c7a66cd80a8b427d62b3f0973b3b1186",
+  "content_sha256": "bfe80d9b789538ad24941d4ed81a21373b94da86df11de84ab2c2db57d5323db",
+  "read_at": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_conditions.csv.gz",
+  "locked_provenance_sha256": []
+ }
+}

@@ -1,0 +1,51 @@
+{
+ "figure": "Extended Data Fig. 6 | Partner molecules often have the deeper history",
+ "generated_by": "06_CODE/Figures/ed06.py",
+ "inputs": {
+  "A1": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "rows": 177308
+  },
+  "frozen": {
+   "file": "05_DATA/Results/directional/ED_owner_partner_exposure_depth.csv",
+   "sha256": "4551b1e4d81d34ee866c75a496b00c75e3af259fa4e3b3cd0ded733a0f6c25e2"
+  },
+  "owner_roles": {
+   "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+   "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+  }
+ },
+ "randomness": "none",
+ "transformation": "For each pair of the population (all pairs of the array, or its product-forming pairs), the number of other partners its owner molecule has within that population, and the same for its partner molecule (molecules by canonical SMILES); mean over the pairs. Owner = the role of Fig. 1d. 'Partner deeper' when the partner's mean is the larger.",
+ "owner_shallower": {
+  "all pairs": 9,
+  "product-forming pairs": 7
+ },
+ "partner_over_owner_range": [
+  1.8214285714285714,
+  4.333333333333334
+ ],
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig6.pdf",
+   "sha256": "a5eabd2b68ae4d958fdbd4e36a2ce73e5211a22cdd6f9cd37e3e6eaf602ca961"
+  },
+  "svg": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig6.svg",
+   "sha256": "be2df96162e2966fd516730047f022a4e39fa3adccdb3c6ccb59c532f6cc254e"
+  },
+  "png": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig6.png",
+   "sha256": "8b9a43e1d9fa77555fe9075b9ebd93abb82b22a139756b82ed3894a80b66bc4d"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig6_SourceData.xlsx",
+   "sha256": "076f9f4e5ae63b7635d60110395d69f6bb8e86710d5c0378a2cc04ef6b06b947"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/extended_data/ed6_plot_readback.json",
+   "sha256": "a09fbfe76b21a9f4c756874c15018d9827ef4203162d1100f7146f473287936c"
+  }
+ }
+}

@@ -1,0 +1,379 @@
+{
+ "gate0": {
+  "passed": true,
+  "checks": 30,
+  "max_abs_diff": 1.3877787807814457e-16,
+  "max_abs_diff_class": 8.326672684688674e-17
+ },
+ "A": {
+  "passed": true,
+  "mean": 0.1965812404150095,
+  "ci": [
+   0.09589949584771823,
+   0.3039556691325372
+  ],
+  "median": 0.17387529812146738,
+  "positive": 17,
+  "n": 23
+ },
+ "B": {
+  "passed": true,
+  "amine_mean": 0.1776095001728689,
+  "amine_ci": [
+   0.07132352810672447,
+   0.29217258746018243
+  ],
+  "amine_positive": 14,
+  "acid_mean": 0.2866970065651773,
+  "acid_values": [
+   0.5836269410677909,
+   0.04373389319341507,
+   0.5651733912098665,
+   -0.04574619921036324
+  ],
+  "balanced": {
+   "mean": 0.2321532533690231,
+   "ci": [
+    0.07843580567701856,
+    0.3836391679224756
+   ]
+  }
+ },
+ "C": {
+  "passed": true,
+  "mean_R_positive": true,
+  "n_R_positive": 6,
+  "mean_amide_minus_BH1": 0.1886733761426131,
+  "mean_amide_minus_BH2": 0.22263730932282194,
+  "mean_R": 0.20565534273271752,
+  "library_contrast_mean": 0.033963933180208836,
+  "library_contrast_ci": [
+   -0.20877828793986353,
+   0.25394206919175716
+  ],
+  "rows": [
+   {
+    "molecule": "COc1ccc(N)cc1",
+    "T_amide": 0.002,
+    "T_BH1": 0.0197,
+    "T_BH2": -0.424,
+    "R": 0.2041
+   },
+   {
+    "molecule": "CSc1ccc(N)cc1",
+    "T_amide": 0.2667,
+    "T_BH1": 0.0646,
+    "T_BH2": 0.124,
+    "R": 0.1725
+   },
+   {
+    "molecule": "CSc1cccc(N)c1",
+    "T_amide": 0.6465,
+    "T_BH1": 0.0861,
+    "T_BH2": -0.3792,
+    "R": 0.793
+   },
+   {
+    "molecule": "Cc1ccc(N)c(C)c1",
+    "T_amide": 0.344,
+    "T_BH1": 0.1009,
+    "T_BH2": 0.0039,
+    "R": 0.2916
+   },
+   {
+    "molecule": "Cc1ccc(N)cc1",
+    "T_amide": 0.1764,
+    "T_BH1": 0.0899,
+    "T_BH2": -0.0848,
+    "R": 0.1739
+   },
+   {
+    "molecule": "Cc1ccc(N)nc1",
+    "T_amide": 0.204,
+    "T_BH1": -0.16,
+    "T_BH2": -0.0093,
+    "R": 0.2886
+   },
+   {
+    "molecule": "Cc1ccccc1N",
+    "T_amide": 0.2622,
+    "T_BH1": 0.3302,
+    "T_BH2": 0.381,
+    "R": -0.0934
+   },
+   {
+    "molecule": "Nc1ccc2nccnc2c1",
+    "T_amide": 0.1029,
+    "T_BH1": -0.0362,
+    "T_BH2": 0.612,
+    "R": -0.185
+   }
+  ]
+ },
+ "D": {
+  "passed": true,
+  "checks": 55,
+  "flips": 0,
+  "max_share_shift": 0.07639865335233431
+ },
+ "verdict": "FULL REDESIGN",
+ "descriptives": {
+  "all_contexts": {
+   "n": 29,
+   "mean": 0.1605025151700359,
+   "ci": [
+    0.08245945115000192,
+    0.2429010536085858
+   ],
+   "positive": 21
+  },
+  "owner_owner": {
+   "n": 38,
+   "mean_T": 0.22500838209180177,
+   "spearman": -0.010832695043221359,
+   "p": 0.9485336276794305
+  },
+  "nonowner_nonowner": {
+   "n": 15,
+   "mean_T": 0.08513346289383474
+  },
+  "D_vs_partner_tanimoto": {
+   "spearman": 0.24901185770750991,
+   "p": 0.25188462234283965
+  },
+  "T_O_mean": 0.25653477175013767,
+  "T_N_mean": 0.05995353133512812
+ },
+ "per_molecule": [
+  {
+   "molecule": "CSc1cccc(N)c1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.6465,
+   "T_N": -0.1465,
+   "D": 0.793,
+   "dTanimoto": 0.0313
+  },
+  {
+   "molecule": "COc1ccc(N)cc1OC",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|2",
+   "T_O": 0.1272,
+   "T_N": -0.4537,
+   "D": 0.5809,
+   "dTanimoto": 0.016
+  },
+  {
+   "molecule": "CCOc1cc(N)ccn1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.4973,
+   "T_N": 0.0281,
+   "D": 0.4692,
+   "dTanimoto": 0.0645
+  },
+  {
+   "molecule": "Cc1cn(-c2cc(N)cc(C(F)(F)F)c2)cn1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.3347,
+   "T_N": 0.0273,
+   "D": 0.3074,
+   "dTanimoto": -0.1081
+  },
+  {
+   "molecule": "Cc1ccc(N)c(C)c1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.344,
+   "T_N": 0.0524,
+   "D": 0.2916,
+   "dTanimoto": 0.0159
+  },
+  {
+   "molecule": "Cc1ccc(N)nc1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.204,
+   "T_N": -0.0846,
+   "D": 0.2886,
+   "dTanimoto": 0.0871
+  },
+  {
+   "molecule": "COc1ccc(N)cc1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.002,
+   "T_N": -0.2021,
+   "D": 0.2041,
+   "dTanimoto": 0.0316
+  },
+  {
+   "molecule": "C#Cc1cccc(N)c1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Sonogashira|1",
+   "T_O": 0.3467,
+   "T_N": 0.1532,
+   "D": 0.1935,
+   "dTanimoto": 0.0093
+  },
+  {
+   "molecule": "CNc1ccc(OC)cc1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.2825,
+   "T_N": 0.0892,
+   "D": 0.1932,
+   "dTanimoto": -0.091
+  },
+  {
+   "molecule": "Cc1ccc(N)cc1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.1764,
+   "T_N": 0.0025,
+   "D": 0.1739,
+   "dTanimoto": 0.0661
+  },
+  {
+   "molecule": "CSc1ccc(N)cc1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.2667,
+   "T_N": 0.0943,
+   "D": 0.1725,
+   "dTanimoto": -0.03
+  },
+  {
+   "molecule": "COc1ccc(N)cn1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.1309,
+   "T_N": -0.0337,
+   "D": 0.1646,
+   "dTanimoto": 0.0608
+  },
+  {
+   "molecule": "CCCCN1CCNCC1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "SNAr|1",
+   "T_O": 0.1315,
+   "T_N": 0.0522,
+   "D": 0.0793,
+   "dTanimoto": -0.0893
+  },
+  {
+   "molecule": "CCOC(=O)c1cccc(N)c1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.222,
+   "T_N": 0.1644,
+   "D": 0.0576,
+   "dTanimoto": 0.048
+  },
+  {
+   "molecule": "COc1ccc(N)cc1C",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.079,
+   "T_N": 0.1067,
+   "D": -0.0277,
+   "dTanimoto": 0.0102
+  },
+  {
+   "molecule": "CCNc1ccccc1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": -0.0621,
+   "T_N": 0.0305,
+   "D": -0.0926,
+   "dTanimoto": -0.0233
+  },
+  {
+   "molecule": "Cc1ccccc1N",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.2622,
+   "T_N": 0.3556,
+   "D": -0.0934,
+   "dTanimoto": 0.0032
+  },
+  {
+   "molecule": "Nc1ccc2nccnc2c1",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1+Buchwald-Hartwig|2",
+   "T_O": 0.1029,
+   "T_N": 0.2879,
+   "D": -0.185,
+   "dTanimoto": -0.1134
+  },
+  {
+   "molecule": "COC(=O)c1ccc(N)cc1OC",
+   "stratum": "amine",
+   "owner_arrays": "Acylation|1",
+   "nonowner_arrays": "Buchwald-Hartwig|1",
+   "T_O": 0.1725,
+   "T_N": 0.3686,
+   "D": -0.1961,
+   "dTanimoto": 0.0235
+  },
+  {
+   "molecule": "COc1cc(C(=O)O)cc(OC)c1OC",
+   "stratum": "acid",
+   "owner_arrays": "Esterification|1",
+   "nonowner_arrays": "Acylation|1",
+   "T_O": 0.6197,
+   "T_N": 0.0361,
+   "D": 0.5836,
+   "dTanimoto": -0.0219
+  },
+  {
+   "molecule": "O=C(O)c1ccc(C(F)(F)F)cn1",
+   "stratum": "acid",
+   "owner_arrays": "Esterification|1",
+   "nonowner_arrays": "Acylation|1",
+   "T_O": 0.7223,
+   "T_N": 0.1571,
+   "D": 0.5652,
+   "dTanimoto": 0.0157
+  },
+  {
+   "molecule": "COc1ncc(Br)cc1C(=O)O",
+   "stratum": "acid",
+   "owner_arrays": "Esterification|1",
+   "nonowner_arrays": "Acylation|1",
+   "T_O": 0.1172,
+   "T_N": 0.0735,
+   "D": 0.0437,
+   "dTanimoto": 0.0593
+  },
+  {
+   "molecule": "O=C(O)c1ccc(F)cn1",
+   "stratum": "acid",
+   "owner_arrays": "Esterification|1",
+   "nonowner_arrays": "Acylation|1",
+   "T_O": 0.1743,
+   "T_N": 0.22,
+   "D": -0.0457,
+   "dTanimoto": -0.1199
+  }
+ ]
+}

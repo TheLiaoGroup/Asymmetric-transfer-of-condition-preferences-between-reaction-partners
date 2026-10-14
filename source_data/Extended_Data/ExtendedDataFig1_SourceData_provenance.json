@@ -1,0 +1,41 @@
+{
+ "figure": "Extended Data Fig. 1 | The best condition on average is not each pair's best",
+ "generated_by": "06_CODE/Figures/ed01.py",
+ "inputs": {
+  "A1": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "rows": 177308
+  },
+  "frozen": {
+   "file": "05_DATA/Results/directional/fixed_condition_gap_15.json",
+   "sha256": "a969c7a68c771789f95d8861132eb767cd1d0188f8c5956e8455cc8c1919f5c4"
+  }
+ },
+ "randomness": "none",
+ "transformation": "For each array: the condition with the highest mean yield over pairs (first in identifier order if tied); over the pairs measured under it, the mean of (the pair's best measured yield - its yield under that condition), in percentage points. Median over the fifteen arrays.",
+ "median_gap_pp": 17.437253441176473,
+ "agreement_with_frozen": 0.0,
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig1.pdf",
+   "sha256": "09ba53a1f58865f4676208e36f0c7b6ef3cd13acb486103ac3103a7e9b356f53"
+  },
+  "svg": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig1.svg",
+   "sha256": "c6c548cb596856f7fe2786e5b09e1629c4a3f5c6f2f3b74c4e5e8abc4fd72da5"
+  },
+  "png": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig1.png",
+   "sha256": "b051a77b0f6d47cf7c1b214c14bbee239a53ad851ff82768c7d1dcb0bfabbf49"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig1_SourceData.xlsx",
+   "sha256": "9712a921b1052b768f1a801b53dc4dc3ee101ceef3e131cf6f7e6f66a4043df7"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/extended_data/ed1_plot_readback.json",
+   "sha256": "75e8534eecc3cf3f385de581eb0eda6bd8f32b3919616bb8ee22241581715ddc"
+  }
+ }
+}

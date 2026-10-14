@@ -1,0 +1,244 @@
+{
+ "figure": "Figure 3 | Ownership predicts combinations beyond the analysed arrays",
+ "generated_by": "06_CODE/Figures/figure3.py",
+ "inputs": {
+  "measurements": {
+   "A1": {
+    "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+    "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2"
+   },
+   "SA1": {
+    "file": "05_DATA/Validation_Set_A/never_analysed_reserve.csv.gz",
+    "sha256": "b756d8fa324e884c56a5ec8a8c7085fd6c6f7309a38bb4610719c915008b3afb"
+   },
+   "SB1": {
+    "file": "05_DATA/Validation_Set_B/never_opened_cross_library.csv.gz",
+    "sha256": "58b76fbd433ae818c862670c203d4546fff10fd1382412a2a554fba9470668a6"
+   }
+  },
+  "rows": {
+   "A1": 177308,
+   "SA1": 29516,
+   "SB1": 30556,
+   "analysis_rows_used": {
+    "Acylation|1": 53233,
+    "Buchwald-Hartwig|1": 19917,
+    "C-O competitive reactions|1": 4559,
+    "Chan-Lam|1": 3239,
+    "Esterification|1": 4653,
+    "Grignard|1": 2741,
+    "Heck|1": 10591,
+    "Hiyama|1": 6623,
+    "Kumada|1": 10917,
+    "Reductive-amination|1": 5230,
+    "SNAr|1": 10611,
+    "Sonogashira|1": 7952,
+    "Suzuki|1": 22002,
+    "Ullmann|1": 10187
+   }
+  },
+  "approved_outputs": {
+   "record_transfer_losses.csv": {
+    "file": "05_DATA/Results/reserve_validation/record_transfer_losses.csv",
+    "sha256": "2f2e8316e629f92fb49ef940c5c696cf3f58bcd7ac0dbde300cd8c245b243b61"
+   },
+   "reserve_validation.json": {
+    "file": "05_DATA/Results/reserve_validation/reserve_validation.json",
+    "sha256": "fbcbe0a74374fa60624a75641eb46eec8b1431aaf6c239dc59ec80b84f343444"
+   },
+   "target_losses.csv": {
+    "file": "05_DATA/Results/cross_library/target_losses.csv",
+    "sha256": "3a4a1e3389e092c55acbc8220f2e6874bc76a725a133a848dffa8317a8a853c4"
+   },
+   "cross_library.json": {
+    "file": "05_DATA/Results/cross_library/cross_library.json",
+    "sha256": "82999430ac556d5284a520901192b5c5d254b1d19e06d26434a495dbaac254a9"
+   },
+   "phase2_setAB_k2.csv": {
+    "file": "05_DATA/Results/directional/phase2_setAB_k2.csv",
+    "sha256": "8196f2d9856929f2102fd1df8b555eb129e0fc02688df4b651528dfc2d32d64d"
+   },
+   "phase2_summary.json": {
+    "file": "05_DATA/Results/directional/phase2_summary.json",
+    "sha256": "5fd82a551c8bdacb804e3947da3d8493077ce9a32b15f1bdfa99be2816c5f2cb"
+   },
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   }
+  }
+ },
+ "panels": {
+  "a": {
+   "design": {
+    "analysis_arrays": 15,
+    "set_A": {
+     "pairs": 309,
+     "arrays": 6
+    },
+    "set_B": {
+     "pairs": 535,
+     "arrays": 13
+    },
+    "union_pairs": 844,
+    "union_systems": 14
+   },
+   "transformation": "Design only, no measurement. Targets: pairs of Set A (SA1) and Set B (SB1) whose two molecules each have at least two distinct partners in the analysis rows (A1) of their array and that have at least eight measured cells."
+  },
+  "b": {
+   "set_A": {
+    "targets": 309,
+    "arrays": 6,
+    "D": 0.1515124805793645,
+    "r2_electrophile": 0.22700267951996245,
+    "r2_partner": 0.07549019894059794,
+    "ci_whole_array": [
+     0.045559654932668496,
+     0.16456433765988554
+    ],
+    "ci_electrophile_cluster": [
+     0.0949903849719767,
+     0.20897852177086199
+    ],
+    "undefined_draws": {
+     "whole_array": 0,
+     "electrophile_cluster": 0
+    },
+    "arrays_positive": 4,
+    "per_array": {
+     "Acylation|1": 0.16272342416253122,
+     "C-O competitive reactions|1": -0.019524678777443325,
+     "Heck|1": 0.03929773440145135,
+     "Hiyama|1": -0.0656395833080887,
+     "Reductive-amination|1": 0.2652967938125111,
+     "Ullmann|1": 0.1271748909377432
+    }
+   },
+   "set_B": {
+    "targets": 535,
+    "arrays": 13,
+    "D": 0.08898431897879708,
+    "r2_electrophile": 0.12657999654951302,
+    "r2_partner": 0.03759567757071591,
+    "ci_whole_array": [
+     0.06344831399048775,
+     0.11144669445326869
+    ],
+    "ci_electrophile_cluster": [
+     0.05717788741879562,
+     0.11896426435717437
+    ],
+    "undefined_draws": {
+     "whole_array": 0,
+     "electrophile_cluster": 0
+    },
+    "arrays_positive": 11,
+    "per_array": {
+     "Acylation|1": 0.09889227712812854,
+     "Buchwald-Hartwig|1": 0.12052199195228804,
+     "Chan-Lam|1": -0.005806979509806974,
+     "Esterification|1": 0.21658274878547365,
+     "Grignard|1": 0.05119199883929593,
+     "Heck|1": 0.11622668909321413,
+     "Hiyama|1": 0.061874493705837655,
+     "Kumada|1": 0.05967409938627664,
+     "Reductive-amination|1": 0.23904890407671686,
+     "SNAr|1": -0.02228998472698821,
+     "Sonogashira|1": 0.18916088417902027,
+     "Suzuki|1": 0.05447002626000358,
+     "Ullmann|1": 0.041330983857287173
+    }
+   },
+   "transformation": "Per array, condition means s and slope-adjusted patterns of the analysis rows (A1); a molecule's profile in a role = sum of its pairs' patterns / (number of observed contributions + 4), for molecules with at least two distinct partners. A target's pattern e = residual of its yields on an intercept and s over the conditions it covers; each profile is projected the same way. SSE = sum of squared errors of e against the projected owner (or partner) profile, SST = sum of e squared. Fraction explained = 1 - sum SSE / sum SST over a set's targets; D = (sum SSE partner - sum SSE owner) / sum SST; per-array D the same within an array. 95% interval: 2,000 draws resampling whole arrays (Set A: the frozen evaluation's draws, listed in SetA_whole_array_bootstrap_draws.csv; Set B: seed 20261007). Set B: a condition measured twice for a pair is dropped."
+  },
+  "c": {
+   "Set A": {
+    "targets": 309,
+    "arrays": 6,
+    "D": 0.09969899506737426,
+    "r2_owner": 0.12410284542328698,
+    "r2_partner": 0.02440385035591275,
+    "ci_whole_array": [
+     0.05118622821941743,
+     0.13077391690948503
+    ],
+    "arrays_positive": 4,
+    "per_array": {
+     "Acylation|1": 0.10347119563153426,
+     "C-O competitive reactions|1": -0.01373336348601285,
+     "Heck|1": 0.0473283478055956,
+     "Hiyama|1": -0.04421419912486657,
+     "Reductive-amination|1": 0.18933994139859406,
+     "Ullmann|1": 0.12566837955959992
+    },
+    "owner_history_deeper": 121,
+    "partner_history_deeper": 168
+   },
+   "Set B": {
+    "targets": 535,
+    "arrays": 13,
+    "D": 0.07355415668039328,
+    "r2_owner": 0.07827471773519323,
+    "r2_partner": 0.004720561054799899,
+    "ci_whole_array": [
+     0.06127847825470462,
+     0.09484297625551114
+    ],
+    "arrays_positive": 12,
+    "per_array": {
+     "Acylation|1": 0.06857700714101977,
+     "Buchwald-Hartwig|1": 0.09897117595166122,
+     "Chan-Lam|1": -0.021920455459625007,
+     "Esterification|1": 0.14579869018204136,
+     "Grignard|1": 0.043629585331486,
+     "Heck|1": 0.09416198508970805,
+     "Hiyama|1": 0.039556385810837875,
+     "Kumada|1": 0.06881099371138619,
+     "Reductive-amination|1": 0.14000165386799654,
+     "SNAr|1": 0.003760259515710943,
+     "Sonogashira|1": 0.19986105989489686,
+     "Suzuki|1": 0.05745540047702221,
+     "Ullmann|1": 0.03941612505284787
+    },
+    "owner_history_deeper": 161,
+    "partner_history_deeper": 312
+   },
+   "transformation": "As panel b, with each side's profile built from exactly two of its molecule's analysis pairs: all two-pair subsets when there are at most 45, otherwise the 45 whose sorted partner identities have the smallest SHA-256; squared errors are averaged over subsets before pooling. Intervals: 2,000 whole-array draws, seed 20261004 for each set. History depth = the number of analysis pairs of the molecule. Post hoc sensitivity, specified after both sets had been scored."
+  }
+ },
+ "agreement_with_frozen_outputs": {
+  "set_A_losses": 3.552713678800501e-15,
+  "set_B_losses": 3.552713678800501e-15,
+  "two_partner_losses": 3.552713678800501e-15
+ },
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Main/Figure3.pdf",
+   "sha256": "d5759bb7366e91600a63dcf0c0515c04eaa0f54ded076b4dbd76aff2a73633dc"
+  },
+  "svg": {
+   "file": "02_FIGURES/Main/Figure3.svg",
+   "sha256": "9fd43be5d8485554a428c0e63436c011caddcc283b8baabe42b6b5778ff86276"
+  },
+  "png": {
+   "file": "02_FIGURES/Main/Figure3.png",
+   "sha256": "bf7ff8cd3d2196f00e9a41c0e808dfd07418b353688172df351d131e3380071a"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Figure3/Figure3_SourceData.xlsx",
+   "sha256": "7f8e52b805527ce9648a71b5e855d7aebccb0cc52c32446a4b6a6149b54c0a99"
+  },
+  "draws": {
+   "file": "04_SOURCE_DATA/Figure3/SetA_whole_array_bootstrap_draws.csv",
+   "sha256": "1e6ca1edc90ded3776d23a22419c3e5ea821be6d43a3704fb6f1416513c955b1"
+  },
+  "owner_draws": {
+   "file": "04_SOURCE_DATA/Figure3/SetA_owner_block_bootstrap_draws.csv",
+   "sha256": "f8a176f057993746aeb3fe148c4192c3ba06ff4c162a0d25f6867ff52ceb4f9e"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/figure3/figure3_plot_readback.json",
+   "sha256": "b495fdb26f6af69fa379477c58877034f92c555c97f3ba735a9236963df59d2e"
+  }
+ }
+}

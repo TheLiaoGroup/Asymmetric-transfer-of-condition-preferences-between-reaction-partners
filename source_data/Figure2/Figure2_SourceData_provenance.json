@@ -1,0 +1,241 @@
+{
+ "figure": "Figure 2 | Reaction context reassigns molecular ownership",
+ "generated_by": "06_CODE/Figures/figure2.py",
+ "inputs": {
+  "measurements": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "A1": {
+    "rows": 177308,
+    "selection": "screens of the 15 arrays (no process-development CMC screen), numeric yield, not Hiyama|1 C46"
+   },
+   "rows_used": {
+    "Acylation|1": 53233,
+    "Buchwald-Hartwig|1": 19917,
+    "Buchwald-Hartwig|2": 4853,
+    "Chan-Lam|1": 3239,
+    "Esterification|1": 4653,
+    "SNAr|1": 10611,
+    "Sonogashira|1": 7952
+   }
+  },
+  "cohorts": {
+   "file": "05_DATA/Analysis/directional_cohorts/DESIGN_COUNTS.csv",
+   "sha256": "707ec422fd493e7a95653d08b57536f9b76e036ea3938509996e11e98b647187"
+  },
+  "approved_outputs": {
+   "phase1_T.csv": {
+    "file": "05_DATA/Results/directional/phase1_T.csv",
+    "sha256": "530dd28b319bc3ac85c839ff2e738e58ca7ca0e3acdf871d13ec77f731496222"
+   },
+   "phase1_D.csv": {
+    "file": "05_DATA/Results/directional/phase1_D.csv",
+    "sha256": "202f99153dd5dd684a2fcbc074f978b4ce1067c2f2343c2894d537a819458705"
+   },
+   "phase1_summary.json": {
+    "file": "05_DATA/Results/directional/phase1_summary.json",
+    "sha256": "4b99d7c1195bcebf6d2ed2964ffceb4ecf178d53e3faf7d68528bdce450f5804"
+   },
+   "Anatomy.json": {
+    "file": "05_DATA/Results/display_inputs/Anatomy.json",
+    "sha256": "90a53aae4769a7e1d54c260a538e3a9e36b6b2fb7bdffe9948f10d397a07dda5"
+   },
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   }
+  },
+  "structures": {
+   "Fig2_b_M1": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M1.svg",
+    "sha256": "f9519ec2eb59e8fdd3bc3e11d756fa39ce09fcec4ec487d4c2805ac91a4e3553",
+    "cdxml_sha256": "3447eb31df2adbc7d8e4d1f2d5ca1e64d24e13ae4c92c3efa98309c40d2cbe93"
+   },
+   "Fig2_b_M2": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M2.svg",
+    "sha256": "4debe36196da3b3e1a59b85f1b2d1b4e08c7b9dd39304f9b79cd747d18abf34d",
+    "cdxml_sha256": "65a5f698b9bec88021d18f45b6bb0df19ebee42dc4f866482deefed04ab1efea"
+   },
+   "Fig2_b_M3": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M3.svg",
+    "sha256": "a6a98ec3fa354060276c98885aa5104783d4b101c8966b4a11a5587b35ccdb2d",
+    "cdxml_sha256": "420296a1f7f1a095e867baafd932aa89dc6236cafd7215cf416e47337ab1ebd9"
+   },
+   "Fig2_b_M4": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M4.svg",
+    "sha256": "1afa0f4770515a755cb941509970346d8d7b546da62934f3cc0a07b530dbe56a",
+    "cdxml_sha256": "2ee29e885bffdd9a9d434e59ca644c9a92d45b36a9e021cd05797fd283cbb448"
+   },
+   "Fig2_b_M5": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M5.svg",
+    "sha256": "965435749854bfc386d9f086d45cf8ad6f3149fa3e31533085e3d0926b3ebdc4",
+    "cdxml_sha256": "0d8f151d31e2223c6633d647d33291b72eb122d1a219e87d293dbffe02fdbcbe"
+   },
+   "Fig2_b_M6": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M6.svg",
+    "sha256": "bfc8ba6e00321eb6ac93f9a4b7f2fad7823786272b4290cab779f567d8b5b870",
+    "cdxml_sha256": "1484c447c0bc369674d3b083a0591c964855a1d91365337252892f62b26d694a"
+   },
+   "Fig2_b_M7": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M7.svg",
+    "sha256": "7fd5e156b1543679f9c37c638b3781458c76e3e46aa4fce0941c96d813713e1b",
+    "cdxml_sha256": "6fb64563fb20514cd7976fdb247b91cc6684e22ffc0af3a8e4d95402c051f23d"
+   },
+   "Fig2_b_M8": {
+    "file": "02_FIGURES/ChemDraw/Fig2_b_M8.svg",
+    "sha256": "fc92bae94339fb41862ae9b2e8302e8b2f66d7c1d838d417d9eccfccb1496643",
+    "cdxml_sha256": "0f25422863e0995e1a71b6b826b6cbc2a11405df45586e3e6b62782253c7b930"
+   },
+   "Fig2_c_aryl": {
+    "file": "02_FIGURES/ChemDraw/Fig2_c_aryl.svg",
+    "sha256": "41695fa1810744dec32d73bceea692fc8c91195941f0c066ecef946d87d8f975",
+    "cdxml_sha256": "143e54f2307c06822f6d00abf00205c5f7ab393b8d016cc5c06e37508677f722"
+   },
+   "Fig2_c_azolelactam1": {
+    "file": "02_FIGURES/ChemDraw/Fig2_c_azolelactam1.svg",
+    "sha256": "b82d8b1387f925e662f4c3a188cc80551b7c505728fea46ab34f412594a0ec04",
+    "cdxml_sha256": "457abc9a0c39dbe14a81ffac91a667d020374c2f114bc126db0358aea177cf77"
+   },
+   "Fig2_c_azolelactam2": {
+    "file": "02_FIGURES/ChemDraw/Fig2_c_azolelactam2.svg",
+    "sha256": "51dff14a24d6a1bbedf96cdef00a662b3ce202fc89ab694d68090e2e3e3dc224",
+    "cdxml_sha256": "19bb76caa1f45c342a01257e94ce981559d66eac16d4b6acda34188418d54ee1"
+   },
+   "Fig2_c_aliphatic1": {
+    "file": "02_FIGURES/ChemDraw/Fig2_c_aliphatic1.svg",
+    "sha256": "bb1255087f5612b755c937622c78986323984353233272eb9c91cca3ae6a6879",
+    "cdxml_sha256": "8cf0ce55922f3201ac2bc04ac06ef9c0fa25f202e6fd3b63e2da5cb3a1d97584"
+   },
+   "Fig2_c_aliphatic2": {
+    "file": "02_FIGURES/ChemDraw/Fig2_c_aliphatic2.svg",
+    "sha256": "d913996f5a25f3fdc63e836cd8f2e4c79849fe5b7c31475a47c75cc7f0db3706",
+    "cdxml_sha256": "f95a1628f1a8bf76169e3c07623a51d0d6595170ec46126a9a3f03e765afb019"
+   }
+  },
+  "structure_spec": {
+   "file": "07_METHODS_AND_PROVENANCE/FIGURE_STRUCTURES_PROMOTION_READY.csv",
+   "sha256": "90893168fab60724eaaa90f95d0786da54baac50efcc886e95d0b53a2b7c2be4"
+  }
+ },
+ "panels": {
+  "a": {
+   "arrays": [
+    "Acylation|1",
+    "Buchwald-Hartwig|1",
+    "Buchwald-Hartwig|2",
+    "Chan-Lam|1",
+    "Esterification|1",
+    "SNAr|1",
+    "Sonogashira|1"
+   ],
+   "molecule_array_role_values": 311,
+   "max_abs_diff_T": 9.71445146547012e-17,
+   "max_abs_diff_D": 9.71445146547012e-17,
+   "records": 23,
+   "stats": {
+    "n": 23,
+    "mean_D": 0.1965812404150095,
+    "ci": [
+     0.09589949584771823,
+     0.3039556691325372
+    ],
+    "positive": 17,
+    "mean_T_O": 0.25653477175013767,
+    "mean_T_N": 0.05995353133512812,
+    "amine": {
+     "n": 19,
+     "mean_D": 0.1776095001728689,
+     "positive": 14,
+     "mean_T_O": 0.22456805503848223,
+     "mean_T_N": 0.04695855486561331
+    },
+    "acid": {
+     "n": 4,
+     "mean_D": 0.2866970065651773,
+     "positive": 3,
+     "mean_T_O": 0.4083766761305007,
+     "mean_T_N": 0.12167966956532346
+    }
+   },
+   "transformation": "A1 rows of the arrays named in each row. In an array a pair is product-forming if its highest yield over the conditions is at least 0.10. Condition pattern = each product-forming pair's yields minus its least-squares line on the condition means (Methods). T(molecule, array) = mean, over ordered pairs of the molecule's product-forming pairs in that array, of the mean product of the two patterns over the conditions measured for both, divided by the array's mean squared pattern. Contexts from DESIGN_COUNTS.csv (frozen cohort G1, arrays whose owner holds at least twice its partner's share): owner = the array in which the molecule's role owns; non-owner = the arrays in which it does not; a context with two arrays takes the mean of their T. Difference = T(owner) - T(non-owner). 95% interval: 10,000 resamples of the 23 molecules (numpy default_rng, seed 20261004), 2.5th and 97.5th percentiles of the mean."
+  },
+  "b": {
+   "records": 8,
+   "stats": {
+    "mean_T": {
+     "amide": 0.2505804550273052,
+     "BH1": 0.06190707888469209,
+     "BH2": 0.027943145704483245
+    },
+    "amide_minus_BH1": 0.18867337614261306,
+    "amide_minus_BH2": 0.22263730932282194,
+    "mean_R": 0.20565534273271752,
+    "R_positive": 6,
+    "above_both": 5,
+    "BH2_partners": [
+     2,
+     3
+    ],
+    "BH2_range": [
+     -0.42400282442277365,
+     0.6119765960542475
+    ]
+   },
+   "transformation": "T as in panel a, for the eight amines measured in all three arrays (triple_context in DESIGN_COUNTS.csv), numbered M1-M8 by heavy atoms, then SMILES. C-N mean = (T in the ligand library + T in the metal library) / 2; R = T(amide) - C-N mean. The two C-N libraries share no condition identifier."
+  },
+  "c": {
+   "records": {
+    "class_pairs": 36
+   },
+   "stats": {
+    "share_nucleophile": 0.003436717003795668,
+    "share_aryl_halide": 0.45564899165350276,
+    "pairs": 36,
+    "molecules": {
+     "aliphatic amine": 10,
+     "azole/lactam N–H": 5
+    },
+    "classes": [
+     "aliphatic amine",
+     "azole/lactam N–H"
+    ],
+    "product_forming": 38,
+    "pairs_all": 228,
+    "conditions": 47,
+    "example": {
+     "smiles": "Cc1cc(F)ccc1C#N",
+     "fully_measured_product_forming_partners": 4,
+     "partners": [
+      "Cc1ccc2[nH]cnc2c1",
+      "c1cc2[nH]ccc2cn1",
+      "c1ccc2[nH]cnc2c1",
+      "c1cnc2cc[nH]c2c1"
+     ]
+    }
+   },
+   "transformation": "SNAr|1 A1 rows, product-forming pairs, patterns as in panel a. Shares: role shares of Figure 1d (Methods) for SNAr|1, as fractions of the pattern variance. Structures: class = amplitude.nucleophile class of the N-H nucleophile (role 1); the two most frequent classes with at least three pairs form the class subset (36 pairs), and the two molecules of each class with the fewest heavy atoms, then SMILES, are drawn."
+  }
+ },
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Main/Figure2.pdf",
+   "sha256": "5aff953585f48df097d2942345f30388bfc7fd2bd4a5a1bbf93470a80566585f"
+  },
+  "svg": {
+   "file": "02_FIGURES/Main/Figure2.svg",
+   "sha256": "e90ce535362f583c53ab5be07ef49a2ba44eabf133978a64d94fa16e84b58c19"
+  },
+  "png": {
+   "file": "02_FIGURES/Main/Figure2.png",
+   "sha256": "a2dd4d5c64375b4dde17233bf14dcbaa246b80b5b575b24f96ec14baefa25357"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Figure2/Figure2_SourceData.xlsx",
+   "sha256": "2799d3d58c42a48e70dc0f3119e9e450228e04ebbcccf17f78635e59d03a914e"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/figure2/figure2_plot_readback.json",
+   "sha256": "c71d0b46bee382bc19eaa1f8757d97207a5fb63e7a1b544df846744c7d70c0cf"
+  }
+ }
+}

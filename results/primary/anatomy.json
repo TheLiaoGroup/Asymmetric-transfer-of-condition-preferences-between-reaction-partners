@@ -1,0 +1,259 @@
+{
+ "forms": 0.1,
+ "n_arrays": 15,
+ "product_forming_pairs": 1542,
+ "pairs": 2210,
+ "agreement": {
+  "share1": 0.14889608996504974,
+  "share2": 0.23498081423654335,
+  "neither": -0.022885788456988056,
+  "arrays_either_above_neither": 15
+ },
+ "share": {
+  "median": 0.3263625491777392,
+  "ci": [
+   0.20582908273458042,
+   0.41908415608627586
+  ],
+  "redrawn": 1187,
+  "range": [
+   0.04141780358128054,
+   0.4590857086572984
+  ],
+  "neither_median": -0.030127333098842444,
+  "noise_median": 0.024614320891453566,
+  "noise_range": [
+   0.013272507521737293,
+   0.06811267439223088
+  ],
+  "combination_median": 0.6350678482401184,
+  "sensitivity": {
+   "0.05": 0.3263625491777392,
+   "0.20": 0.3515508818276449
+  },
+  "hiyama_duplicate_reliability": 0.669012643355659,
+  "noise_scale": 1.0253019555341696
+ },
+ "substrate_class": [
+  {
+   "explained": 0.1770698591912787,
+   "null_median": 0.009040112105883624,
+   "null_p95": 0.03193352226201889,
+   "p": 0.0002,
+   "pairs": 386,
+   "molecules": {
+    "primary (hetero)aryl amine": 34,
+    "primary alkyl amine": 17
+   },
+   "screen": "Acylation|1",
+   "classified_role": 1,
+   "classified_is_owner": true,
+   "additive_share": 0.30043406884543766,
+   "classes": [
+    "primary (hetero)aryl amine",
+    "primary alkyl amine"
+   ]
+  },
+  {
+   "explained": 0.004768002694731988,
+   "null_median": 0.0074861943546167264,
+   "null_p95": 0.01317185331841435,
+   "p": 0.9282,
+   "pairs": 166,
+   "molecules": {
+    "N-aryl secondary amine": 10,
+    "primary (hetero)aryl amine": 47
+   },
+   "screen": "Buchwald-Hartwig|1",
+   "classified_role": 1,
+   "classified_is_owner": false,
+   "additive_share": 0.08196501048655844,
+   "classes": [
+    "primary (hetero)aryl amine",
+    "N-aryl secondary amine"
+   ]
+  },
+  {
+   "explained": 0.03607704378506582,
+   "null_median": 0.021717771175748468,
+   "null_p95": 0.0437159083739862,
+   "p": 0.1802,
+   "pairs": 57,
+   "molecules": {
+    "alkyl aldehyde": 1,
+    "aryl aldehyde": 26
+   },
+   "screen": "Reductive-amination|1",
+   "classified_role": 1,
+   "classified_is_owner": false,
+   "additive_share": 0.12666527477120823,
+   "classes": [
+    "aryl aldehyde",
+    "alkyl aldehyde"
+   ]
+  },
+  {
+   "explained": 0.12289263812800066,
+   "null_median": 0.028244924563402773,
+   "null_p95": 0.06484322144482851,
+   "p": 0.0002,
+   "pairs": 36,
+   "molecules": {
+    "aliphatic amine": 10,
+    "azole/lactam N\u2013H": 5
+   },
+   "screen": "SNAr|1",
+   "classified_role": 1,
+   "classified_is_owner": false,
+   "additive_share": 0.003436717003795668,
+   "classes": [
+    "aliphatic amine",
+    "azole/lactam N\u2013H"
+   ]
+  }
+ ],
+ "ownership": {
+  "arrays": 15,
+  "same_owner_both_estimators": 15,
+  "owner_at_least_twice_partner": 12,
+  "median_owner_fraction": 0.8041471222239404,
+  "owners": {
+   "Acylation|1": "N\u2013H partner",
+   "Buchwald-Hartwig|1": "aryl (pseudo)halide",
+   "Buchwald-Hartwig|2": "aryl halide",
+   "C-O competitive reactions|1": "aryl halide",
+   "Chan-Lam|1": "boronic acid",
+   "Esterification|1": "carboxylic acid",
+   "Grignard|1": "carbonyl compound",
+   "Heck|1": "aryl halide",
+   "Hiyama|1": "aryl halide",
+   "Kumada|1": "aryl or acyl halide",
+   "Reductive-amination|1": "amine",
+   "SNAr|1": "aryl halide",
+   "Sonogashira|1": "aryl halide",
+   "Suzuki|1": "aryl halide",
+   "Ullmann|1": "aryl halide"
+  }
+ },
+ "electrophile": {
+  "arrays": 10,
+  "carries": 10,
+  "carries_ml": 10,
+  "ml_median_share": 0.29425453619352127,
+  "dominant_partner_class": {
+   "Buchwald-Hartwig|1": {
+    "category": "primary aniline",
+    "molecules": 57,
+    "of": 82
+   },
+   "Ullmann|1": {
+    "category": "alcohol or phenol",
+    "molecules": 37,
+    "of": 40
+   },
+   "Sonogashira|1": {
+    "category": "terminal alkyne",
+    "molecules": 29,
+    "of": 29
+   },
+   "Suzuki|1": {
+    "category": "boronic acid",
+    "molecules": 26,
+    "of": 26
+   },
+   "Heck|1": {
+    "category": "alkene",
+    "molecules": 26,
+    "of": 26
+   },
+   "Buchwald-Hartwig|2": {
+    "category": "primary aniline",
+    "molecules": 25,
+    "of": 28
+   },
+   "Hiyama|1": {
+    "category": "organosilane",
+    "molecules": 24,
+    "of": 24
+   },
+   "C-O competitive reactions|1": {
+    "category": "alcohol or phenol",
+    "molecules": 22,
+    "of": 25
+   },
+   "Kumada|1": {
+    "category": "Grignard reagent",
+    "molecules": 17,
+    "of": 17
+   },
+   "SNAr|1": {
+    "category": "secondary aliphatic amine",
+    "molecules": 14,
+    "of": 29
+   }
+  }
+ },
+ "prediction": {
+  "median_all": 0.14496438991024818,
+  "median_product_forming": 0.14903921375591267
+ },
+ "selection": {
+  "all": {
+   "n": 1967,
+   "fitted": [
+    1.7053486307961188,
+    1.1282642809185448,
+    2.2983038438000287
+   ],
+   "raw": [
+    1.3741447743425628,
+    0.7675601377117299,
+    1.9991438200694231
+   ],
+   "rescue_pct": 2.8469750889679712,
+   "loss_pct": 1.3557024233180817,
+   "gap_mean": 9.520778381428796,
+   "gap_closed": 0.1791186143060075
+  },
+  "product_forming": {
+   "n": 1376,
+   "fitted": [
+    2.4410454497887346,
+    1.6245563630639073,
+    3.274592990750236
+   ],
+   "raw": [
+    1.9613644015977383,
+    1.0925310118826816,
+    2.858146199412791
+   ],
+   "rescue_pct": 4.069767441860465,
+   "loss_pct": 1.937984496124031,
+   "gap_mean": 13.57946557539034,
+   "gap_closed": 0.17976005287075278
+  },
+  "records": {
+   "rescues": 159,
+   "losses": 76,
+   "records": 5704
+  }
+ },
+ "depth": {
+  "targets": 1251,
+  "molecules": 150,
+  "pooled_r2": {
+   "1": 0.03993271618305083,
+   "2": 0.07224421981261209,
+   "3": 0.08698777735280205,
+   "4": 0.10419357013506125,
+   "6": 0.12439364676393339
+  },
+  "difference": [
+   0.08446093058088258,
+   0.06533247665572314,
+   0.10332965219913928
+  ],
+  "rises_every_step": true,
+  "accumulates": true
+ }
+}

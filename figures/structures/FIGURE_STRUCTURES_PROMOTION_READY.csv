@@ -1,0 +1,18 @@
+figure,panel,label,role,smiles,rule,heavy_atoms
+1,a,A (held N-H partner),N-H partner,CNOC,frozen Fig. 1b shared molecule,4
+1,a,B (central acid),carboxylic acid,O=C(O)c1ccco1,first acid of the frozen Fig. 1b order,8
+1,a,C (replacement acid),carboxylic acid,O=C(O)c1ccc(Br)s1,second acid of the frozen Fig. 1b order,9
+1,a,D (replacement N-H partner),N-H partner,CNc1ccc(F)cc1,"fewest heavy atoms, then SMILES, among the 9 other product-forming N-H partners of B",9
+2,b,M1,"N-H partner (amide, BH|1, BH|2)",Cc1ccc(N)cc1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",8
+2,b,M2,"N-H partner (amide, BH|1, BH|2)",Cc1ccc(N)nc1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",8
+2,b,M3,"N-H partner (amide, BH|1, BH|2)",Cc1ccccc1N,"all eight triple-context amines, numbered by heavy atoms, then SMILES",8
+2,b,M4,"N-H partner (amide, BH|1, BH|2)",COc1ccc(N)cc1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",9
+2,b,M5,"N-H partner (amide, BH|1, BH|2)",CSc1ccc(N)cc1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",9
+2,b,M6,"N-H partner (amide, BH|1, BH|2)",CSc1cccc(N)c1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",9
+2,b,M7,"N-H partner (amide, BH|1, BH|2)",Cc1ccc(N)c(C)c1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",9
+2,b,M8,"N-H partner (amide, BH|1, BH|2)",Nc1ccc2nccnc2c1,"all eight triple-context amines, numbered by heavy atoms, then SMILES",11
+2,c,aryl fluoride,aryl halide,Cc1cc(F)ccc1C#N,"SNAr aryl halide with the most product-forming partners measured under all 47 conditions (ties: fewer heavy atoms, then SMILES); in SNAr|1: 4 pairs, 4 product-forming, all with azole N-H partners",10
+2,c,azole/lactam N–H,N-H nucleophile,Cc1ccc(=O)[nH]c1,"class-analysis subset; two of 5 with fewest heavy atoms, then SMILES; stands for its class population, not chosen as a partner of the aryl fluoride",8
+2,c,azole/lactam N–H,N-H nucleophile,c1cc2[nH]ccc2cn1,"class-analysis subset; two of 5 with fewest heavy atoms, then SMILES; stands for its class population, not chosen as a partner of the aryl fluoride",9
+2,c,aliphatic amine,N-H nucleophile,C1CCNC1,"class-analysis subset; two of 10 with fewest heavy atoms, then SMILES; stands for its class population, not chosen as a partner of the aryl fluoride",5
+2,c,aliphatic amine,N-H nucleophile,CC1CCCNC1,"class-analysis subset; two of 10 with fewest heavy atoms, then SMILES; stands for its class population, not chosen as a partner of the aryl fluoride",7

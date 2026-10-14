@@ -1,0 +1,64 @@
+{
+ "figure": "Extended Data Fig. 5 | On 217 out-of-array amide pairs the amine again owns",
+ "generated_by": "06_CODE/Figures/ed05.py",
+ "inputs": {
+  "SA1": {
+   "file": "05_DATA/Validation_Set_A/never_analysed_reserve.csv.gz",
+   "sha256": "b756d8fa324e884c56a5ec8a8c7085fd6c6f7309a38bb4610719c915008b3afb",
+   "rows": 29516
+  },
+  "release_rule": {
+   "file": "05_DATA/Results/reserve_validation/record_transfer_losses.csv",
+   "sha256": "2f2e8316e629f92fb49ef940c5c696cf3f58bcd7ac0dbde300cd8c245b243b61"
+  },
+  "owner_roles": {
+   "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+   "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+  },
+  "frozen": {
+   "file": "05_DATA/Results/reserve_validation/reserve_validation.json",
+   "sha256": "fbcbe0a74374fa60624a75641eb46eec8b1431aaf6c239dc59ec80b84f343444"
+  }
+ },
+ "randomness": "2,000 molecule resamples, default_rng(20261004), the generator's first draws",
+ "transformation": {
+  "a": "Product-forming amide pairs of SA1 (best measured yield at least 10%). Condition pattern = residual after an intercept and slope on the condition means of these pairs; share of a role = mean product of the patterns of pairs sharing only that molecule / mean pattern variance; 'neither' = the same for pairs sharing no molecule.",
+  "b": "2,000 resamples of the molecules of each role (anatomy.molecule_weights) with the generator default_rng(20261004), drawn before any other use of it; each resample's margin = amine share minus acid share. 95% interval: 2.5th and 97.5th percentiles (linear interpolation); the fraction of resamples with a positive margin."
+ },
+ "result": {
+  "pairs": 217,
+  "share1": 0.32244662643661837,
+  "share2": 0.12048296481856849,
+  "neither": -0.015457471933189172,
+  "owner": 1,
+  "margin": 0.20196366161804988,
+  "ci": [
+   -0.05795537220425735,
+   0.47259674676882696
+  ],
+  "positive": 0.9405
+ },
+ "agreement_with_frozen": 3.6618374998909076e-11,
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig5.pdf",
+   "sha256": "5def7ab8de2097e802ef0df07f1a37f7abf3adcff5a7cde4bfd4bef9f107c679"
+  },
+  "svg": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig5.svg",
+   "sha256": "8f33bfa948c204bb81ee74afd7fdffcf04ef754d2e73aeca9b14fd40a09b1a13"
+  },
+  "png": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig5.png",
+   "sha256": "a5adf247d0fb9c6a3ccc2905e291e7be7d53d730a089ae494d7775054f335b10"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig5_SourceData.xlsx",
+   "sha256": "e65683fcda1dfbcd4afcf24806b6b44f12a204e1be4a172dab64a1e6cd68f249"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/extended_data/ed5_plot_readback.json",
+   "sha256": "6c64773d1cf8303077bd01ca75e8c70e2cb6436e356d04e95eca86c8c79ec700"
+  }
+ }
+}

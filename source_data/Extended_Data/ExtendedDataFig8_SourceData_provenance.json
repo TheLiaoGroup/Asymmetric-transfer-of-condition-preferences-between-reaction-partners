@@ -1,0 +1,714 @@
+{
+ "figure": "Extended Data Fig. 8 | Ranking conditions by histories, and a molecule's own history against a substitute",
+ "generated_by": "06_CODE/Figures/ed08.py",
+ "inputs": {
+  "A1": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "rows": 177308
+  },
+  "released": {
+   "fig4a_folds": {
+    "file": "04_SOURCE_DATA/Figure4/Fig4a_folds.csv",
+    "sha256": "cc8f729c68e61c72c7a21d3d31dd9bc3d043b4c7ce1d1aaa8b484b3323be8c7a"
+   }
+  },
+  "fold_registry": {
+   "file": "05_DATA/Analysis/06_METADATA/frozen_folds.json",
+   "sha256": "ed71a5f8e06d54733a7beaed6bd74247aebc290b4634b78e18fac83b18ed6700",
+   "entries_used": "history|<array>|transfer|0-2"
+  },
+  "registry_integrity": [
+   {
+    "file": "05_DATA/Analysis/06_METADATA/input_lock.json",
+    "sha256": "3fecb984c1ea731893c6ff1442fa7aea7931e4e92385ed7c37d238635fa0ab3e"
+   },
+   {
+    "file": "07_METHODS_AND_PROVENANCE/analysis_runtime/PATH_RELOCATIONS.json",
+    "sha256": "27275dccfb4bbfbc214b913317c5ef7b3f0aa593df90a62791e77ff5b210e64f"
+   }
+  ],
+  "matched_control": {
+   "code": {
+    "file": "06_CODE/Validation/06_validation/matched_control.py",
+    "sha256": "c79903769db89fab834184166169fdd73cd79c14597e12cf5a28f1aac5ab227a"
+   },
+   "configuration": {
+    "file": "06_CODE/Validation/06_validation/analysis_config.json",
+    "sha256": "44db94208d0b37247f357dee4763ff781245a3a9a63e5349c186d06c6e331170"
+   }
+  },
+  "frozen": {
+   "history_arrays": {
+    "file": "05_DATA/Results/primary/history_arrays.csv",
+    "sha256": "dfb5ae61419ff14a25dcf437cff7ae321bf5fd59943440e8d5902065a0355b31"
+   },
+   "history_cv": {
+    "file": "05_DATA/Results/primary/history_cv.csv",
+    "sha256": "891588f7b1a27b0c969a8eea207ce3498089ed143f736403e89e53bcaacf5599"
+   },
+   "anatomy": {
+    "file": "05_DATA/Results/primary/anatomy.json",
+    "sha256": "90a53aae4769a7e1d54c260a538e3a9e36b6b2fb7bdffe9948f10d397a07dda5"
+   },
+   "fold_assignments": {
+    "file": "05_DATA/Results/validation/matched/fold_assignments.csv",
+    "sha256": "f5bac5beb6eeeaab3c29bfb6fab983294fc8c634b8cde29f4f0d48016ed96c2d"
+   },
+   "fold_effects": {
+    "file": "05_DATA/Results/validation/matched/fold_effects.csv",
+    "sha256": "ba235b979673167519eac9684750e56be70162edf5fcc81f3bd3e9dc393ed104"
+   },
+   "pooled_effects": {
+    "file": "05_DATA/Results/validation/matched/pooled_effects.csv",
+    "sha256": "30261a77833b08f5d199bfd74d25180bc6564ff9707c4ae7a13bf58c642ab740"
+   }
+  },
+  "decision": {
+   "phase2_decision.csv": {
+    "file": "05_DATA/Results/directional/phase2_decision.csv",
+    "sha256": "b82970af2f5fb94996e4152f9412d30c1ae2488bcc10fcdc0b57199a9f2edb5a"
+   },
+   "phase2_depth_curve.csv": {
+    "file": "05_DATA/Results/directional/phase2_depth_curve.csv",
+    "sha256": "224c57a4d7addc78db8696daae9bcbcfd4f7108f9cdb7e367c0f4d38a39e319b"
+   },
+   "phase2_summary.json": {
+    "file": "05_DATA/Results/directional/phase2_summary.json",
+    "sha256": "5fd82a551c8bdacb804e3947da3d8493077ce9a32b15f1bdfa99be2816c5f2cb"
+   },
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   }
+  }
+ },
+ "randomness": {
+  "folds": "frozen registry (released as ExtendedDataFig8_transfer_folds.csv)",
+  "a": "common.owner_interval: default_rng(20260920), 5,000 draws, a fresh generator per interval",
+  "b": "matched_control.array_bootstrap: default_rng(20260928), 10,000 draws, a fresh generator per interval",
+  "c": "history subsets and the trio are deterministic (SHA-256 order; greedy); interval default_rng(20261006).integers(0, 12, (10000, 12)) over the arrays in sorted identifier order, drawn once",
+  "d": "history subsets deterministic (SHA-256 of 'target|j|partner'); intervals default_rng(20261008).integers(0, n, (10000, n)) over the n molecules of each curve in sorted order, a fresh generator for each curve"
+ },
+ "transformation": {
+  "a": "Three repeats of five training folds (ExtendedDataFig8_transfer_folds.csv). In each fold: residual = yield - pair mean - training condition mean + training grand mean; both partners' shrunken profiles (sum / (count + 4)) fitted jointly on the training pairs (ten alternating rounds). Fitted ranking: the three largest of training condition mean + the profiles of the target's two molecules (zero for a molecule without training pairs). Raw ranking: the three largest mean raw yields of the training pairs sharing either molecule. Complementary trio: greedy on the training pairs (each step adds the condition that most raises the mean best-of-panel yield). A target is scored when one of its molecules has training pairs and every condition of the panels is measured; per target, the mean over the repeats in which it was scored of best measured yield of the ranked trio minus that of the complementary trio. Product-forming: best measured yield at least 10%. Interval: 5,000 resamples, within each array, of the building blocks of the role whose single-role history explains more held-out residual on the five history folds of Fig. 4a, each with all its targets; pooled mean = sum / count; 2.5th and 97.5th percentiles; default_rng(20260920), arrays in sorted identifier order.",
+  "b": "The same folds. For each role and fold: training residual = yield - pair mean - condition mean + grand mean on the training pairs; each molecule's shrunken profile (sum / (count + 4)) over its training pairs; its trio = the three largest of profile + training condition mean. For a fully measured held-out pair whose molecule on that role has training pairs: own = best measured yield of its molecule's trio; substitute = mean over the eligible donors of the best measured yield of each donor's trio. Donors are other molecules of the role with training pairs. Depth and coverage matched: the same number of training pairs, support Jaccard at least 0.95, covered conditions differing by at most one, per-condition counts differing by at most one, normalized count L1 at most 0.05. Exact per-condition counts: identical per-condition counts. Training-activity caliper: matched and mean training yield within 0.05. Closest structural neighbour: matched and ECFP4 (radius 2, 2,048 bits) Tanimoto at least 0.5, the most similar (ties kept). Per target: mean over the folds in which it was scored. Interval: 10,000 whole-array draws, default_rng(20260928), arrays in sorted identifier order; pooled mean = sum / count; 2.5th and 97.5th percentiles.",
+  "c": "Analysis arrays (A1). Targets: product-forming pairs whose two molecules each have at least two other product-forming partners, in arrays with at least ten such targets (910); a target is scored when every condition of its panels and of the trio was measured (729). For each target, condition means and slope-adjusted patterns are refitted on the other product-forming pairs of its array. A side's panel = the three conditions with the largest condition mean + that molecule's profile from two of its other pairs (all two-pair subsets, or the 45 with the smallest SHA-256 of the sorted partner identities), ties to the first condition. Best yield = the panel's largest measured yield, averaged over subsets. Difference = owner's panel minus partner's, in percentage points; targets weighted equally. 95% interval: 10,000 draws resampling whole arrays (seed 20261006, arrays in sorted identifier order).",
+  "d": "As panel b, in the three arrays where at least 50 targets have an owner with at least six other product-forming partners, with 1, 2, 3, 4 or 6 history partners: five subsets per depth, subset j holding the partners with the smallest SHA-256 of 'target|j|partner'. Gain = best yield of the history-ranked panel minus that of the complementary trio (greedy, fitted on all other pairs of the array), in percentage points. Pointwise 95% intervals: 10,000 draws resampling molecules within the array (seed 20261008 for each curve, molecules in sorted order, the same draws at every depth)."
+ },
+ "resampled_role": {
+  "Acylation|1": "p1",
+  "Buchwald-Hartwig|1": "p2",
+  "Buchwald-Hartwig|2": "p2",
+  "C-O competitive reactions|1": "p2",
+  "Chan-Lam|1": "p2",
+  "Esterification|1": "p2",
+  "Grignard|1": "p1",
+  "Heck|1": "p1",
+  "Hiyama|1": "p1",
+  "Kumada|1": "p1",
+  "Reductive-amination|1": "p1",
+  "SNAr|1": "p2",
+  "Sonogashira|1": "p1",
+  "Suzuki|1": "p1",
+  "Ullmann|1": "p2"
+ },
+ "estimates": {
+  "a": [
+   {
+    "population": "product_forming",
+    "ranking": "fitted",
+    "targets": 1376,
+    "arrays": 15,
+    "building_blocks": 415,
+    "mean_pp": 2.4410454497887346,
+    "ci_lower_pp": 1.6245563630639073,
+    "ci_upper_pp": 3.274592990750236
+   },
+   {
+    "population": "product_forming",
+    "ranking": "raw",
+    "targets": 1376,
+    "arrays": 15,
+    "building_blocks": 415,
+    "mean_pp": 1.9613644015977383,
+    "ci_lower_pp": 1.0925310118826816,
+    "ci_upper_pp": 2.858146199412791
+   },
+   {
+    "population": "all",
+    "ranking": "fitted",
+    "targets": 1967,
+    "arrays": 15,
+    "building_blocks": 548,
+    "mean_pp": 1.7053486307961188,
+    "ci_lower_pp": 1.1282642809185448,
+    "ci_upper_pp": 2.2983038438000287
+   },
+   {
+    "population": "all",
+    "ranking": "raw",
+    "targets": 1967,
+    "arrays": 15,
+    "building_blocks": 548,
+    "mean_pp": 1.3741447743425628,
+    "ci_lower_pp": 0.7675601377117299,
+    "ci_upper_pp": 1.9991438200694231
+   }
+  ],
+  "b": [
+   {
+    "control": "primary",
+    "role": 1,
+    "targets": 647,
+    "arrays": 15,
+    "mean_pp": 0.9427985884648601,
+    "ci_lower_pp": -0.12587338671121737,
+    "ci_upper_pp": 2.2339320927023913
+   },
+   {
+    "control": "primary",
+    "role": 2,
+    "targets": 657,
+    "arrays": 15,
+    "mean_pp": 2.0065447978879103,
+    "ci_lower_pp": 1.0299010165055882,
+    "ci_upper_pp": 3.875354555846021
+   },
+   {
+    "control": "strict",
+    "role": 1,
+    "targets": 262,
+    "arrays": 13,
+    "mean_pp": 1.0445284361688214,
+    "ci_lower_pp": 0.11657619866643329,
+    "ci_upper_pp": 2.2384979302413606
+   },
+   {
+    "control": "strict",
+    "role": 2,
+    "targets": 331,
+    "arrays": 12,
+    "mean_pp": 1.0936568991450895,
+    "ci_lower_pp": 0.2049341051526601,
+    "ci_upper_pp": 3.6286802950868355
+   },
+   {
+    "control": "activity",
+    "role": 1,
+    "targets": 547,
+    "arrays": 15,
+    "mean_pp": 1.199373669725947,
+    "ci_lower_pp": 0.2992976653320001,
+    "ci_upper_pp": 2.19865038437015
+   },
+   {
+    "control": "activity",
+    "role": 2,
+    "targets": 549,
+    "arrays": 15,
+    "mean_pp": 1.7516909006159864,
+    "ci_lower_pp": 0.614554039275804,
+    "ci_upper_pp": 3.9912125474734954
+   },
+   {
+    "control": "structure",
+    "role": 1,
+    "targets": 89,
+    "arrays": 13,
+    "mean_pp": -0.9589143258426974,
+    "ci_lower_pp": -3.026226721309632,
+    "ci_upper_pp": 2.332362175283482
+   },
+   {
+    "control": "structure",
+    "role": 2,
+    "targets": 69,
+    "arrays": 10,
+    "mean_pp": -0.35541567728255674,
+    "ci_lower_pp": -3.188016068980536,
+    "ci_upper_pp": 2.388513961553574
+   }
+  ],
+  "c": {
+   "order": [
+    "Buchwald-Hartwig|1",
+    "Buchwald-Hartwig|2",
+    "Heck|1",
+    "Kumada|1",
+    "SNAr|1",
+    "Sonogashira|1",
+    "Suzuki|1",
+    "Ullmann|1",
+    "Acylation|1",
+    "Esterification|1",
+    "Grignard|1",
+    "Reductive-amination|1"
+   ],
+   "preference": {
+    "targets": 729,
+    "arrays": 12,
+    "owner_minus_partner": {
+     "mean_pp": 1.5972100080761866,
+     "ci_pp": [
+      0.6970771976454253,
+      4.05061380129176
+     ],
+     "arrays_positive": 11,
+     "per_array_pp": {
+      "Acylation|1": 0.36101955601892094,
+      "Buchwald-Hartwig|1": 0.7816311245910494,
+      "Buchwald-Hartwig|2": 16.45718816070666,
+      "Esterification|1": 2.1393460238095203,
+      "Grignard|1": -1.0686426051503706,
+      "Heck|1": 3.0975789016688107,
+      "Kumada|1": 4.798992490270269,
+      "Reductive-amination|1": 0.4415171131779495,
+      "SNAr|1": 3.100234074074076,
+      "Sonogashira|1": 9.862840065203315,
+      "Suzuki|1": 3.177210039987776,
+      "Ullmann|1": 1.0253456655417805
+     },
+     "n": {
+      "Acylation|1": 364,
+      "Buchwald-Hartwig|1": 96,
+      "Buchwald-Hartwig|2": 10,
+      "Esterification|1": 10,
+      "Grignard|1": 15,
+      "Heck|1": 37,
+      "Kumada|1": 37,
+      "Reductive-amination|1": 12,
+      "SNAr|1": 9,
+      "Sonogashira|1": 7,
+      "Suzuki|1": 120,
+      "Ullmann|1": 12
+     }
+    },
+    "owner_minus_trio": {
+     "mean_pp": 1.113335449994524,
+     "ci_pp": [
+      -0.2770018388875016,
+      3.8427494679767653
+     ],
+     "arrays_positive": 8,
+     "per_array_pp": {
+      "Acylation|1": 0.26374041051463065,
+      "Buchwald-Hartwig|1": -2.046479614223846,
+      "Buchwald-Hartwig|2": 3.60218510071832,
+      "Esterification|1": 1.8719190238095196,
+      "Grignard|1": -0.7114238750225114,
+      "Heck|1": 3.0516097504504507,
+      "Kumada|1": 2.1502169459459464,
+      "Reductive-amination|1": 4.706413768278881,
+      "SNAr|1": -2.6293370370370384,
+      "Sonogashira|1": 13.2048943128058,
+      "Suzuki|1": 4.658113984732794,
+      "Ullmann|1": -0.7230053788353977
+     },
+     "n": {
+      "Acylation|1": 364,
+      "Buchwald-Hartwig|1": 96,
+      "Buchwald-Hartwig|2": 10,
+      "Esterification|1": 10,
+      "Grignard|1": 15,
+      "Heck|1": 37,
+      "Kumada|1": 37,
+      "Reductive-amination|1": 12,
+      "SNAr|1": 9,
+      "Sonogashira|1": 7,
+      "Suzuki|1": 120,
+      "Ullmann|1": 12
+     }
+    }
+   },
+   "additive": {
+    "targets": 724,
+    "arrays": 12,
+    "owner_minus_partner": {
+     "mean_pp": 1.6953162088817684,
+     "ci_pp": [
+      0.5948767412613026,
+      4.687378182059049
+     ],
+     "arrays_positive": 11,
+     "per_array_pp": {
+      "Acylation|1": 0.262583133034369,
+      "Buchwald-Hartwig|1": 0.5232692403107354,
+      "Buchwald-Hartwig|2": 21.750566607455333,
+      "Esterification|1": 2.279610880952383,
+      "Grignard|1": -0.7023749303319534,
+      "Heck|1": 2.9152093130992047,
+      "Kumada|1": 5.982643483673467,
+      "Reductive-amination|1": 0.2342555457176307,
+      "SNAr|1": 0.878326481481484,
+      "Sonogashira|1": 7.900692587999668,
+      "Suzuki|1": 3.897162362729796,
+      "Ullmann|1": 0.7101623044306703
+     },
+     "n": {
+      "Acylation|1": 363,
+      "Buchwald-Hartwig|1": 95,
+      "Buchwald-Hartwig|2": 10,
+      "Esterification|1": 10,
+      "Grignard|1": 15,
+      "Heck|1": 40,
+      "Kumada|1": 35,
+      "Reductive-amination|1": 12,
+      "SNAr|1": 9,
+      "Sonogashira|1": 7,
+      "Suzuki|1": 116,
+      "Ullmann|1": 12
+     }
+    },
+    "owner_minus_trio": {
+     "mean_pp": 1.1909966964083858,
+     "ci_pp": [
+      -0.28155019594261893,
+      4.220884721817912
+     ],
+     "arrays_positive": 8,
+     "per_array_pp": {
+      "Acylation|1": 0.23756272574902002,
+      "Buchwald-Hartwig|1": -1.9502192272172763,
+      "Buchwald-Hartwig|2": 4.134564967384986,
+      "Esterification|1": 0.7329918809523805,
+      "Grignard|1": -0.9539360972447326,
+      "Heck|1": 1.7892787195833335,
+      "Kumada|1": 3.2919820666666664,
+      "Reductive-amination|1": 4.09767511748523,
+      "SNAr|1": -2.362461111111112,
+      "Sonogashira|1": 14.788564788996277,
+      "Suzuki|1": 5.3583999466403185,
+      "Ullmann|1": -1.070348462168731
+     },
+     "n": {
+      "Acylation|1": 363,
+      "Buchwald-Hartwig|1": 95,
+      "Buchwald-Hartwig|2": 10,
+      "Esterification|1": 10,
+      "Grignard|1": 15,
+      "Heck|1": 40,
+      "Kumada|1": 35,
+      "Reductive-amination|1": 12,
+      "SNAr|1": 9,
+      "Sonogashira|1": 7,
+      "Suzuki|1": 116,
+      "Ullmann|1": 12
+     }
+    }
+   }
+  },
+  "d": {
+   "owner | Acylation|1": {
+    "targets": 307,
+    "molecules": 28,
+    "curve": [
+     {
+      "K": 1,
+      "mean_pp": -0.14291617782770744,
+      "ci_pp": [
+       -0.6050075946747979,
+       0.5171974837401748
+      ]
+     },
+     {
+      "K": 2,
+      "mean_pp": 0.05602957445999465,
+      "ci_pp": [
+       -0.5617148511240195,
+       0.8778710571849409
+      ]
+     },
+     {
+      "K": 3,
+      "mean_pp": 0.3258421584811878,
+      "ci_pp": [
+       -0.4606462517150012,
+       1.3746134522153879
+      ]
+     },
+     {
+      "K": 4,
+      "mean_pp": 0.8668032742170678,
+      "ci_pp": [
+       0.019801046988172005,
+       2.0653974577307768
+      ]
+     },
+     {
+      "K": 6,
+      "mean_pp": 0.9852483708919649,
+      "ci_pp": [
+       0.005767632576624196,
+       2.3418317571196434
+      ]
+     }
+    ]
+   },
+   "owner | Suzuki|1": {
+    "targets": 74,
+    "molecules": 9,
+    "curve": [
+     {
+      "K": 1,
+      "mean_pp": 6.885300796730654,
+      "ci_pp": [
+       2.6093546991230725,
+       11.006569209459457
+      ]
+     },
+     {
+      "K": 2,
+      "mean_pp": 8.722204253538111,
+      "ci_pp": [
+       3.2027303513513536,
+       13.667689412059289
+      ]
+     },
+     {
+      "K": 3,
+      "mean_pp": 9.187080550835413,
+      "ci_pp": [
+       3.222157801373161,
+       14.598547905875082
+      ]
+     },
+     {
+      "K": 4,
+      "mean_pp": 9.80296784813271,
+      "ci_pp": [
+       3.1194984621189312,
+       15.871275870313994
+      ]
+     },
+     {
+      "K": 6,
+      "mean_pp": 11.170486801710226,
+      "ci_pp": [
+       4.682777272238701,
+       17.113111399936546
+      ]
+     }
+    ]
+   },
+   "owner | Buchwald-Hartwig|1": {
+    "targets": 62,
+    "molecules": 7,
+    "curve": [
+     {
+      "K": 1,
+      "mean_pp": -0.2719594744765948,
+      "ci_pp": [
+       -2.3510789148249787,
+       2.3320941870676686
+      ]
+     },
+     {
+      "K": 2,
+      "mean_pp": -0.8152500938184809,
+      "ci_pp": [
+       -3.126394132777669,
+       2.2174461212121215
+      ]
+     },
+     {
+      "K": 3,
+      "mean_pp": -1.544121595933345,
+      "ci_pp": [
+       -3.989581192307687,
+       0.9130679215686268
+      ]
+     },
+     {
+      "K": 4,
+      "mean_pp": -1.6366172227698916,
+      "ci_pp": [
+       -4.318027352501317,
+       0.9792371669016267
+      ]
+     },
+     {
+      "K": 6,
+      "mean_pp": -2.2765471825619716,
+      "ci_pp": [
+       -4.8695369998244695,
+       -0.13428711757154774
+      ]
+     }
+    ]
+   },
+   "partner | Acylation|1": {
+    "targets": 319,
+    "molecules": 30,
+    "curve": [
+     {
+      "K": 1,
+      "mean_pp": 0.16785175165798033,
+      "ci_pp": [
+       -0.8020740863315227,
+       1.2946410363284817
+      ]
+     },
+     {
+      "K": 2,
+      "mean_pp": 0.2386168781319749,
+      "ci_pp": [
+       -0.7277945111108763,
+       1.4448228466971362
+      ]
+     },
+     {
+      "K": 3,
+      "mean_pp": 0.42768431215657987,
+      "ci_pp": [
+       -0.506110020494287,
+       1.5833726481415438
+      ]
+     },
+     {
+      "K": 4,
+      "mean_pp": 0.2915838451322016,
+      "ci_pp": [
+       -0.5994792001214126,
+       1.396132388444113
+      ]
+     },
+     {
+      "K": 6,
+      "mean_pp": 0.5512440569025792,
+      "ci_pp": [
+       -0.6123020197916806,
+       1.9979536949881274
+      ]
+     }
+    ]
+   },
+   "partner | Suzuki|1": {
+    "targets": 172,
+    "molecules": 18,
+    "curve": [
+     {
+      "K": 1,
+      "mean_pp": 1.1403139690062776,
+      "ci_pp": [
+       -0.28530458864159935,
+       2.764472241916664
+      ]
+     },
+     {
+      "K": 2,
+      "mean_pp": 0.26880978278283046,
+      "ci_pp": [
+       -1.374969850332776,
+       2.086133743119041
+      ]
+     },
+     {
+      "K": 3,
+      "mean_pp": 0.8258604061711117,
+      "ci_pp": [
+       -0.7166048841269949,
+       2.657531207996125
+      ]
+     },
+     {
+      "K": 4,
+      "mean_pp": 0.6648191124373632,
+      "ci_pp": [
+       -0.8660147794868831,
+       2.5187074054536023
+      ]
+     },
+     {
+      "K": 6,
+      "mean_pp": 0.6639260916403914,
+      "ci_pp": [
+       -1.128969821224239,
+       2.6895511698641275
+      ]
+     }
+    ]
+   },
+   "partner | Buchwald-Hartwig|1": {
+    "targets": 33,
+    "molecules": 5,
+    "curve": [
+     {
+      "K": 1,
+      "mean_pp": -6.6713927272727345,
+      "ci_pp": [
+       -13.146729312500014,
+       -0.4302227272727302
+      ]
+     },
+     {
+      "K": 2,
+      "mean_pp": -6.555251151515158,
+      "ci_pp": [
+       -12.381475393939406,
+       -0.7290269090909102
+      ]
+     },
+     {
+      "K": 3,
+      "mean_pp": -5.33901181818182,
+      "ci_pp": [
+       -9.270741333333337,
+       -1.4072823030303023
+      ]
+     },
+     {
+      "K": 4,
+      "mean_pp": -4.386348000000003,
+      "ci_pp": [
+       -8.160464121212128,
+       -0.6122318787878769
+      ]
+     },
+     {
+      "K": 6,
+      "mean_pp": -1.5378791515151489,
+      "ci_pp": [
+       -4.723513806451614,
+       1.065094787878797
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "agreement_with_frozen": {
+  "history_r2": 2.211772431870429e-16,
+  "history_cv": 0.0,
+  "matched_fold_effects": 1.1102230246251565e-16,
+  "phase2_decision.csv": 1.1102230246251565e-16,
+  "phase2_depth_curve.csv": 9.974659986866641e-17
+ },
+ "history_records": 5704,
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig8.pdf",
+   "sha256": "7cb314dbe677f1bfdb0a8ecc1022d0c4420ac8e8a00a182c2c01428de0e4e0bb"
+  },
+  "svg": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig8.svg",
+   "sha256": "5acda7afa49036f32f075437875e1a4b2ccc613ca0762eab0c198a45290cc7e4"
+  },
+  "png": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig8.png",
+   "sha256": "f78f6043922481658f9266e7b59d029fe4830351283f636295f2079bbf177cab"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig8_SourceData.xlsx",
+   "sha256": "b720d0f1cb901bed87373700d51d062a879545d6674a49e7397efcc7c9bb2ada"
+  },
+  "folds": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig8_transfer_folds.csv",
+   "sha256": "509a578667ab197b5a95053457a5fa9464d5df3f3bda9a9de7ba17530e2165d2"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/extended_data/ed8_plot_readback.json",
+   "sha256": "5f9ad6723b2bb2afdcd6e60a7401121e45993a90cb6d0181e7c8101f9f858120"
+  }
+ }
+}

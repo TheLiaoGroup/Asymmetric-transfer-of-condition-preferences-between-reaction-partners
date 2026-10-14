@@ -1,0 +1,327 @@
+{
+ "fig4a": {
+  "array_folds": 75,
+  "labels_differing": [
+   "Chan-Lam|1|5",
+   "Reductive-amination|1|1",
+   "Reductive-amination|1|4"
+  ],
+  "records_moved": 5,
+  "published": {
+   "owner": {
+    "records": 498,
+    "R2_1": 0.08752093670343541,
+    "R2_2": 0.14790912563601954,
+    "R2_3": 0.17934334115846617,
+    "R2_4": 0.20762705518663727,
+    "R2_6": 0.2363251203714708
+   },
+   "partner": {
+    "records": 753,
+    "R2_1": 0.005653989919037539,
+    "R2_2": 0.017741307828292086,
+    "R2_3": 0.020462257885292656,
+    "R2_4": 0.029688407263985805,
+    "R2_6": 0.04376721648005921
+   }
+  },
+  "nested": {
+   "owner": {
+    "records": 493,
+    "R2_1": 0.0876610015244712,
+    "R2_2": 0.14766718177788074,
+    "R2_3": 0.17909802608955638,
+    "R2_4": 0.20722965646123892,
+    "R2_6": 0.2358721257315245
+   },
+   "partner": {
+    "records": 758,
+    "R2_1": 0.005884094711676946,
+    "R2_2": 0.018438643856238834,
+    "R2_3": 0.02127774879348776,
+    "R2_4": 0.030689217818275716,
+    "R2_6": 0.04486662195212876
+   }
+  },
+  "published_common": {
+   "owner": {
+    "records": 312,
+    "targets": 312,
+    "R2_1": 0.09372907754698145,
+    "R2_2": 0.15777535311368318,
+    "R2_3": 0.19361218181752438,
+    "R2_4": 0.22227977859247394,
+    "R2_6": 0.25430066370647664
+   },
+   "partner": {
+    "records": 312,
+    "targets": 312,
+    "R2_1": 0.009576490957024397,
+    "R2_2": 0.02004666349348727,
+    "R2_3": 0.025624729323793227,
+    "R2_4": 0.030637540785943163,
+    "R2_6": 0.05007057841991169
+   }
+  },
+  "nested_common": {
+   "owner": {
+    "records": 312,
+    "targets": 312,
+    "R2_1": 0.09372907754698145,
+    "R2_2": 0.15777535311368318,
+    "R2_3": 0.19361218181752438,
+    "R2_4": 0.22227977859247394,
+    "R2_6": 0.25430066370647664
+   },
+   "partner": {
+    "records": 312,
+    "targets": 312,
+    "R2_1": 0.009576490957024397,
+    "R2_2": 0.02004666349348727,
+    "R2_3": 0.025624729323793227,
+    "R2_4": 0.030637540785943163,
+    "R2_6": 0.05007057841991169
+   }
+  }
+ },
+ "fig4b": {
+  "targets": 910,
+  "flipped_targets": 0,
+  "flipped": [],
+  "published": {
+   "owner": 0.12124115694631699,
+   "partner": 0.005263443435778337,
+   "D": 0.11597771351053864
+  },
+  "nested": {
+   "owner": 0.12124115694631699,
+   "partner": 0.005263443435778337,
+   "D": 0.11597771351053864,
+   "D_ci": [
+    0.10625771049764667,
+    0.12544768828151223
+   ],
+   "arrays_positive": 11,
+   "arrays": 12
+  }
+ },
+ "components": {
+  "rows": [
+   {
+    "array": "Acylation|1",
+    "owner": 1,
+    "components": 1,
+    "largest_pairs": 490,
+    "pairs": 490,
+    "largest_owner": 1,
+    "largest_share1": 0.30043406884543766,
+    "largest_share2": 0.12968683257210012,
+    "within_owner": 1,
+    "within_share1": 0.30043406884543766,
+    "within_share2": 0.12968683257210012,
+    "within_neither": -0.012821169613138271
+   },
+   {
+    "array": "Buchwald-Hartwig|1",
+    "owner": 2,
+    "components": 4,
+    "largest_pairs": 177,
+    "pairs": 185,
+    "largest_owner": 2,
+    "largest_share1": 0.08294529249075577,
+    "largest_share2": 0.23402290921082924,
+    "within_owner": 2,
+    "within_share1": 0.08196501048655844,
+    "within_share2": 0.24439753869118075,
+    "within_neither": -0.015404768860499083
+   },
+   {
+    "array": "Buchwald-Hartwig|2",
+    "owner": 2,
+    "components": 1,
+    "largest_pairs": 52,
+    "pairs": 52,
+    "largest_owner": 2,
+    "largest_share1": -0.0015588124623897672,
+    "largest_share2": 0.3905626049360631,
+    "within_owner": 2,
+    "within_share1": -0.0015588124623897672,
+    "within_share2": 0.3905626049360631,
+    "within_neither": -0.041140583838560875
+   },
+   {
+    "array": "C-O competitive reactions|1",
+    "owner": 2,
+    "components": 3,
+    "largest_pairs": 22,
+    "pairs": 24,
+    "largest_owner": 2,
+    "largest_share1": -0.0737479974331285,
+    "largest_share2": 0.08675734162571255,
+    "within_owner": 2,
+    "within_share1": -0.05793721382167717,
+    "within_share2": 0.09935501740295771,
+    "within_neither": -0.06490836165587227
+   },
+   {
+    "array": "Chan-Lam|1",
+    "owner": 2,
+    "components": 5,
+    "largest_pairs": 36,
+    "pairs": 41,
+    "largest_owner": 2,
+    "largest_share1": 0.11931481392349746,
+    "largest_share2": 0.1541948649744616,
+    "within_owner": 2,
+    "within_share1": 0.13060019709180912,
+    "within_share2": 0.15903904673168817,
+    "within_neither": -0.044657302090872354
+   },
+   {
+    "array": "Esterification|1",
+    "owner": 2,
+    "components": 6,
+    "largest_pairs": 28,
+    "pairs": 41,
+    "largest_owner": 2,
+    "largest_share1": -0.0032028927653229688,
+    "largest_share2": 0.3325502295557428,
+    "within_owner": 2,
+    "within_share1": 0.0011762369533934453,
+    "within_share2": 0.3891622507131059,
+    "within_neither": -0.10246299294700967
+   },
+   {
+    "array": "Grignard|1",
+    "owner": 2,
+    "components": 2,
+    "largest_pairs": 48,
+    "pairs": 49,
+    "largest_owner": 2,
+    "largest_share1": 0.010632969011960244,
+    "largest_share2": 0.05394069372575639,
+    "within_owner": 2,
+    "within_share1": 0.013440600566893626,
+    "within_share2": 0.05538335419507367,
+    "within_neither": -0.025836550604468506
+   },
+   {
+    "array": "Heck|1",
+    "owner": 2,
+    "components": 4,
+    "largest_pairs": 85,
+    "pairs": 89,
+    "largest_owner": 2,
+    "largest_share1": 0.06528732251393052,
+    "largest_share2": 0.27030745872853346,
+    "within_owner": 2,
+    "within_share1": 0.06768920612617534,
+    "within_share2": 0.2785014545257872,
+    "within_neither": -0.026100694431851593
+   },
+   {
+    "array": "Hiyama|1",
+    "owner": 2,
+    "components": 3,
+    "largest_pairs": 15,
+    "pairs": 20,
+    "largest_owner": 2,
+    "largest_share1": 0.05242433961757548,
+    "largest_share2": 0.21311600010842652,
+    "within_owner": 2,
+    "within_share1": 0.11912924661424595,
+    "within_share2": 0.20020389707982442,
+    "within_neither": -0.07373520308214918
+   },
+   {
+    "array": "Kumada|1",
+    "owner": 1,
+    "components": 2,
+    "largest_pairs": 95,
+    "pairs": 97,
+    "largest_owner": 1,
+    "largest_share1": 0.33409050221250636,
+    "largest_share2": 0.08166214195538044,
+    "within_owner": 1,
+    "within_share1": 0.3388896308990812,
+    "within_share2": 0.08301111554257191,
+    "within_neither": -0.03201471392203125
+   },
+   {
+    "array": "Reductive-amination|1",
+    "owner": 2,
+    "components": 8,
+    "largest_pairs": 28,
+    "pairs": 60,
+    "largest_owner": 1,
+    "largest_share1": 0.30121150827219556,
+    "largest_share2": 0.09977826466547471,
+    "within_owner": 2,
+    "within_share1": 0.12666527477120823,
+    "within_share2": 0.16948518128662107,
+    "within_neither": -0.042958982865509865
+   },
+   {
+    "array": "SNAr|1",
+    "owner": 2,
+    "components": 3,
+    "largest_pairs": 34,
+    "pairs": 38,
+    "largest_owner": 2,
+    "largest_share1": -0.013880341934506893,
+    "largest_share2": 0.40229829420150626,
+    "within_owner": 2,
+    "within_share1": 0.003436717003795668,
+    "within_share2": 0.45564899165350276,
+    "within_neither": -0.048065238532643544
+   },
+   {
+    "array": "Sonogashira|1",
+    "owner": 2,
+    "components": 3,
+    "largest_pairs": 53,
+    "pairs": 69,
+    "largest_owner": 2,
+    "largest_share1": 0.10645741372553541,
+    "largest_share2": 0.16057864512034872,
+    "within_owner": 2,
+    "within_share1": 0.10950639544566902,
+    "within_share2": 0.24204448638197584,
+    "within_neither": -0.028266188151852095
+   },
+   {
+    "array": "Suzuki|1",
+    "owner": 1,
+    "components": 4,
+    "largest_pairs": 193,
+    "pairs": 226,
+    "largest_owner": 1,
+    "largest_share1": 0.23632423548411394,
+    "largest_share2": 0.02533466256362269,
+    "within_owner": 1,
+    "within_share1": 0.24814217262736105,
+    "within_share2": 0.06043590440548565,
+    "within_neither": -0.012327084178769227
+   },
+   {
+    "array": "Ullmann|1",
+    "owner": 2,
+    "components": 7,
+    "largest_pairs": 51,
+    "pairs": 61,
+    "largest_owner": 2,
+    "largest_share1": -0.053865005589708484,
+    "largest_share2": 0.2742888351321411,
+    "within_owner": 2,
+    "within_share1": -0.0472997334403652,
+    "within_share2": 0.29881717492400145,
+    "within_neither": -0.030681011121835678
+   }
+  ],
+  "largest_same_owner": 14,
+  "largest_evaluable": 15,
+  "within_same_owner": 15,
+  "within_molecular_median": 0.3263625491777392,
+  "within_neither_median": -0.03201471392203125
+ }
+}

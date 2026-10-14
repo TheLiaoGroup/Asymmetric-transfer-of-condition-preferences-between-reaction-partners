@@ -1,0 +1,53 @@
+{
+ "figure": "Extended Data Fig. 2 | Pairs that share a molecule have more similar yield profiles in every array",
+ "generated_by": "06_CODE/Figures/ed02.py",
+ "inputs": {
+  "A1": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "rows": 177308
+  },
+  "frozen": {
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   },
+   "Figure1c_profile_correlations.csv": {
+    "file": "05_DATA/Results/display_inputs/Figure1c_profile_correlations.csv",
+    "sha256": "79a754eea782a6b31e27d2573181a7d9e9e79a9bec3e329642361597ed31afb3"
+   }
+  }
+ },
+ "randomness": "none",
+ "transformation": "Product-forming pairs (best measured yield at least 10%) of each array. Additive residual = yield minus the pair's and the condition's means (fitted jointly). For every two pairs, the Pearson correlation of their residual profiles over shared conditions; mean over the pairs that share only the role-1 molecule, only the role-2 molecule, or neither.",
+ "medians": {
+  "share1": 0.14889608996504974,
+  "share2": 0.23498081423654335,
+  "neither": -0.022885788456988056
+ },
+ "arrays_either_above_neither": 15,
+ "arrays_both_above_neither": 13,
+ "agreement_with_frozen": 9.454242944073599e-17,
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig2.pdf",
+   "sha256": "a26867ea2e0d4b0ba3565536e6fa49b0b10d0e1a27274951a675b4cd5e7ea77d"
+  },
+  "svg": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig2.svg",
+   "sha256": "1df97858c97cf1635507ba9e7e2e8760f2eda37a1b64a4cd5c2c89d2c76fcb19"
+  },
+  "png": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig2.png",
+   "sha256": "144724c9489215dfdd6ae54d8ff8d12368931da3b3f24a484596ba92c2b1e952"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig2_SourceData.xlsx",
+   "sha256": "4f343f6e7fefb22a9a98b2b88eb22b2c6e066be38eb0b3b6159b0c5027ba393d"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/extended_data/ed2_plot_readback.json",
+   "sha256": "081b54ca109061b78a92300843ccb3f9c2c84bf53d11c6dee675c4c2b65ac18a"
+  }
+ }
+}

@@ -1,0 +1,160 @@
+{
+ "figure": "Figure 1 | Condition knowledge is directional",
+ "generated_by": "06_CODE/Figures/figure1.py",
+ "inputs": {
+  "measurements": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "A1": {
+    "rows": 177308,
+    "selection": "screens of the 15 arrays (no process-development CMC screen), numeric yield, not Hiyama|1 C46"
+   },
+   "A3": {
+    "rows": 74,
+    "selection": "Hiyama|1, condition C46 (duplicate of C43)"
+   }
+  },
+  "approved_outputs": {
+   "Figure1b_example_selection.json": {
+    "file": "05_DATA/Results/display_inputs/Figure1b_example_selection.json",
+    "sha256": "e29d5b5198057b8d25a4ae3180aea854416b328c3e27270fd36d737fa7027966"
+   },
+   "Figure1b_example_residuals.csv": {
+    "file": "05_DATA/Results/display_inputs/Figure1b_example_residuals.csv",
+    "sha256": "35366213deea8f5972817eda66283b034651875689ea2626d5fe455837f50add"
+   },
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   },
+   "Anatomy.json": {
+    "file": "05_DATA/Results/display_inputs/Anatomy.json",
+    "sha256": "90a53aae4769a7e1d54c260a538e3a9e36b6b2fb7bdffe9948f10d397a07dda5"
+   }
+  },
+  "structures": {
+   "A": {
+    "file": "02_FIGURES/ChemDraw/Fig1_a_A.svg",
+    "sha256": "6f16bb70a97eee72ea1f6070720b6942259dd44c126d3eba5e396533cd572618",
+    "cdxml_sha256": "8cd46539b3b465f59083011419b78168b9d881c5c18524bc841cf44d6d64db77"
+   },
+   "B": {
+    "file": "02_FIGURES/ChemDraw/Fig1_a_B.svg",
+    "sha256": "9813b8ef1117a891b289733eab0b8c762ea60f474dc7e22734e7845388f83799",
+    "cdxml_sha256": "13b79dc0bbf46d53f3b07630b2b01cda951680c80bd5dc0dd9851a3403779721"
+   },
+   "C": {
+    "file": "02_FIGURES/ChemDraw/Fig1_a_C.svg",
+    "sha256": "b19467ea97b354477cb2065a37d4beb31a22bfaa9f14866628167a02f0fa9c39",
+    "cdxml_sha256": "35484778fc932d55b4877e908277ab161b0c137f978d45320c7947b9f087054b"
+   },
+   "D": {
+    "file": "02_FIGURES/ChemDraw/Fig1_a_D.svg",
+    "sha256": "2f2a992ef4d75c0569f00529dc779adedf3fa1605de26eb9ece4a13c1dc24c74",
+    "cdxml_sha256": "9f01beb51f8fd07e426caa3ddc2948df0376a8296ad9d3c4feca6d2c32729be0"
+   }
+  },
+  "structure_spec": {
+   "file": "07_METHODS_AND_PROVENANCE/FIGURE_STRUCTURES_PROMOTION_READY.csv",
+   "sha256": "90893168fab60724eaaa90f95d0786da54baac50efcc886e95d0b53a2b7c2be4"
+  }
+ },
+ "panels": {
+  "a": {
+   "records": 4,
+   "measurements_plotted": 0,
+   "transformation": "Schematic. A-D are molecules of the amide coupling array (SMILES in this sheet); A + B, A + C and D + B are product-forming pairs of that array (A1). No measurement is plotted."
+  },
+  "b": {
+   "screen": "Acylation|1",
+   "pairs": 578,
+   "product_forming": 490,
+   "conditions": 94,
+   "a1_rows_array": 53233,
+   "a1_rows_plotted": 752,
+   "max_abs_diff_points": 2.1316282072803006e-14,
+   "records": 752,
+   "correlations": 12,
+   "transformation": "A1 rows of the amide coupling array (Acylation|1). A pair is product-forming if its highest yield over the conditions is at least 0.10. Condition mean = mean yield of a condition over the product-forming pairs. Each pair's yields are fitted by least squares to intercept + slope x condition mean over its 94 conditions; condition pattern = 100 x (yield - fitted yield), in percentage points. Cell colour = pattern clipped to +/-30 points. r = Pearson correlation of two rows' patterns over the 94 conditions; mean r = mean of the six r within a group.",
+   "mean_r": {
+    "shared": 0.6030382674068328,
+    "comparison": 0.014018216847333518
+   }
+  },
+  "c": {
+   "noise_calibration": {
+    "duplicate_pairs": 74,
+    "duplicate_agreement": 0.6690126433556589,
+    "duplicate_pattern_pearson": 0.7192644963706785,
+    "k": 1.0253019555341694
+   },
+   "max_abs_diff": {
+    "pairs": 0.0,
+    "product_forming": 0.0,
+    "share1": 6.938893903907228e-17,
+    "share2": 8.326672684688674e-17,
+    "neither": 9.71445146547012e-17,
+    "molecular": 8.326672684688674e-17,
+    "noise": 9.020562075079397e-17,
+    "combination": 1.1102230246251565e-16,
+    "owner_share": 8.326672684688674e-17,
+    "partner_share": 6.938893903907228e-17,
+    "owner_fraction": 2.220446049250313e-16
+   },
+   "arrays": 15,
+   "pairs": 2210,
+   "product_forming": 1542,
+   "a1_rows": 177308,
+   "records": 15,
+   "medians": {
+    "molecular": 0.3263625491777392,
+    "combination": 0.6350678482401184,
+    "noise": 0.02461432089145356,
+    "neither": -0.030127333098842444
+   },
+   "molecular_median_interval": [
+    0.20582908273458042,
+    0.41908415608627586
+   ],
+   "transformation": "For each of the 15 arrays (A1 rows), condition patterns as in panel b over the array's product-forming pairs. Share of role 1 (2) = mean, over ordered pairs of pairs that share only their role-1 (role-2) molecule, of the mean product of the two patterns over the conditions measured for both, divided by the mean over pairs of the mean squared pattern. Molecular = role 1 + role 2. Noise = mean over pairs of the mean model measurement variance left in a pattern, k x max(0.07 x clip(fitted, 0, 1), 0.012)^2 x (1 - leverage), divided by the same mean squared pattern; k makes the model reproduce the Hiyama C43/C46 duplicate (C43 from A1, C46 from A3). Unattributed = 1 - molecular - noise (pair-specific interaction and any error outside the noise model). Neither shared = the role-share ratio for pairs sharing neither molecule. All x 100 (%)."
+  },
+  "d": {
+   "records": 15,
+   "counts": {
+    "median_owner_fraction": 0.8041471222239404,
+    "twice": 12,
+    "same_owner": 15,
+    "halide_arrays": 10,
+    "halide_owns": 10,
+    "arrays": 15
+   },
+   "transformation": "Role shares of panel c (x 100, %). Owner = role with the larger share; owner fraction = owner share / (role 1 + role 2 share); owner >= 2x partner compares the owner share with twice the partner share, a negative partner share counted as zero. Electrophilic halide = the role named '... halide' (10 arrays). Likelihood owner: approved output of the Gaussian likelihood fit (anatomy.ml_components), not rerun here."
+  }
+ },
+ "taken_from_approved_outputs": [
+  "95% interval of the median molecular share (Anatomy.json share.ci; 2,000 hierarchical resamples of arrays and molecules)",
+  "owner named by the likelihood estimator (Anatomy_arrays.csv ml_owner_role)"
+ ],
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Main/Figure1.pdf",
+   "sha256": "f0c448bcea823c17e24fd6eff70f7adc735cd3c2782c560bd70609d57bcc4b03"
+  },
+  "svg": {
+   "file": "02_FIGURES/Main/Figure1.svg",
+   "sha256": "13107b4fd4ee7bf33e6f3af0de5fa5fe7098038b2283d523d188716b23fdd66f"
+  },
+  "png": {
+   "file": "02_FIGURES/Main/Figure1.png",
+   "sha256": "1a28754cf9bd6898849f44d995c5c26622c9ec34cb8a1b94017ccd6715649043"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Figure1/Figure1_SourceData.xlsx",
+   "sha256": "7f310e7cf81657a55bc7ed1ecaddb70db7bede821f6c3e00b0ef95b6a6429fb8"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/figure1/figure1_plot_readback.json",
+   "sha256": "6cccfa1f0de3f160e21598317314c103f3cef07be8ac32e437026247e46924ea"
+  }
+ }
+}

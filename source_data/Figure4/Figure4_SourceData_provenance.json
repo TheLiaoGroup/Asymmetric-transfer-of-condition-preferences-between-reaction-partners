@@ -1,0 +1,205 @@
+{
+ "figure": "Figure 4 | Owner histories accumulate",
+ "generated_by": "06_CODE/Figures/figure4.py",
+ "inputs": {
+  "measurements": {
+   "A1": {
+    "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+    "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2"
+   }
+  },
+  "rows": {
+   "A1": 177308
+  },
+  "fold_registry": {
+   "file": "05_DATA/Analysis/06_METADATA/frozen_folds.json",
+   "sha256": "ed71a5f8e06d54733a7beaed6bd74247aebc290b4634b78e18fac83b18ed6700",
+   "entries_used": [
+    "history|Acylation|1|cv|0",
+    "history|Buchwald-Hartwig|1|cv|0",
+    "history|Buchwald-Hartwig|2|cv|0",
+    "history|C-O competitive reactions|1|cv|0",
+    "history|Chan-Lam|1|cv|0",
+    "history|Esterification|1|cv|0",
+    "history|Grignard|1|cv|0",
+    "history|Heck|1|cv|0",
+    "history|Hiyama|1|cv|0",
+    "history|Kumada|1|cv|0",
+    "history|Reductive-amination|1|cv|0",
+    "history|SNAr|1|cv|0",
+    "history|Sonogashira|1|cv|0",
+    "history|Suzuki|1|cv|0",
+    "history|Ullmann|1|cv|0"
+   ]
+  },
+  "approved_outputs": {
+   "anatomy_depth.csv": {
+    "file": "05_DATA/Results/primary/anatomy_depth.csv",
+    "sha256": "7cb89d58bbf51a9ce9cafe15f23ad7ed39ab2e3e31f1b825b72b899454b27730"
+   },
+   "phase2_depth_by_role.csv": {
+    "file": "05_DATA/Results/directional/phase2_depth_by_role.csv",
+    "sha256": "362401bc520a9a846c0eacc106daf6ee0c5c81080aba295ebd1d946ed74e1a2a"
+   },
+   "phase3_transport.csv": {
+    "file": "05_DATA/Results/directional/phase3_transport.csv",
+    "sha256": "80932f22d119f83566b57b44fec325b28cb89e1ab5d43e38d48c4f863ff70fee"
+   },
+   "phase3_summary.json": {
+    "file": "05_DATA/Results/directional/phase3_summary.json",
+    "sha256": "2558c65a85e391b940234836d53d4d6576debb1c90efb358500baeceb77c3333"
+   },
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   }
+  },
+  "phase2_code": {
+   "file": "06_CODE/Directional_Ownership/phase2_section7.py",
+   "sha256": "0cbaafe6b238bf8560bfe135d504199e0eb49237cc3a3fff2991c3f5b0792516"
+  }
+ },
+ "panels": {
+  "a": {
+   "estimand": "additive residual response profile (retains response amplitude)",
+   "curve": [
+    {
+     "side": "owner",
+     "k": 1,
+     "explained": 0.08752093670343541,
+     "records": 498,
+     "molecules": 63
+    },
+    {
+     "side": "owner",
+     "k": 2,
+     "explained": 0.14790912563601954,
+     "records": 498,
+     "molecules": 63
+    },
+    {
+     "side": "owner",
+     "k": 3,
+     "explained": 0.17934334115846617,
+     "records": 498,
+     "molecules": 63
+    },
+    {
+     "side": "owner",
+     "k": 4,
+     "explained": 0.2076270551866375,
+     "records": 498,
+     "molecules": 63
+    },
+    {
+     "side": "owner",
+     "k": 6,
+     "explained": 0.2363251203714708,
+     "records": 498,
+     "molecules": 63
+    },
+    {
+     "side": "partner",
+     "k": 1,
+     "explained": 0.005653989919037317,
+     "records": 753,
+     "molecules": 87
+    },
+    {
+     "side": "partner",
+     "k": 2,
+     "explained": 0.017741307828292086,
+     "records": 753,
+     "molecules": 87
+    },
+    {
+     "side": "partner",
+     "k": 3,
+     "explained": 0.020462257885292656,
+     "records": 753,
+     "molecules": 87
+    },
+    {
+     "side": "partner",
+     "k": 4,
+     "explained": 0.029688407263985805,
+     "records": 753,
+     "molecules": 87
+    },
+    {
+     "side": "partner",
+     "k": 6,
+     "explained": 0.04376721648005921,
+     "records": 753,
+     "molecules": 87
+    }
+   ],
+   "transformation": "Analysis arrays (A1), five history folds per array (Fig4a_folds.csv). A record is a held-out product-forming pair with one of its molecules (owner or partner) that has at least six training pairings in that role. Additive residual of a pair = its yields minus its own mean, minus the training condition means, plus the training grand mean. For k = 1, 2, 3, 4, 6 the molecule's profile = sum of the residuals of k of its training pairings drawn at random (Fig4a_history_draws.csv) / (observed contributions + 4); SSE_k = squared error of the target's residual against that profile, averaged over five draws; SST = sum of the target's squared residuals. Explained = 1 - sum SSE_k / sum SST over the records of a side."
+  },
+  "b": {
+   "estimand": "slope-adjusted condition pattern at equal depth",
+   "transport": {
+    "D": 0.11597771351053864,
+    "ci": [
+     0.10625771049764682,
+     0.1254476882815124
+    ],
+    "r2_owner": 0.12124115694631721,
+    "r2_partner": 0.005263443435778337
+   },
+   "per_array": {
+    "Acylation|1": 0.1141445813666584,
+    "Buchwald-Hartwig|1": 0.10989017279776375,
+    "Buchwald-Hartwig|2": 0.23587662176704297,
+    "Esterification|1": 0.1725082495926426,
+    "Grignard|1": 0.046777229191269566,
+    "Heck|1": 0.08883907957339622,
+    "Kumada|1": 0.12601464948613522,
+    "Reductive-amination|1": -0.040784914531997875,
+    "SNAr|1": 0.10021659542582738,
+    "Sonogashira|1": 0.08699328525897386,
+    "Suzuki|1": 0.12763863648707985,
+    "Ullmann|1": 0.13904271537660698
+   },
+   "transformation": "Product-forming targets whose two molecules each have at least two other product-forming partners, arrays with at least ten (910 targets, 12 arrays). For each target: condition means and slope-adjusted patterns of the other product-forming pairs; each side's profile from two of its molecule's other pairs (all two-pair subsets, or the 45 with the smallest SHA-256), projected with the target off an intercept and the condition means; squared errors averaged over subsets. Fraction explained = 1 - sum SSE / sum SST; D = (sum SSE partner - sum SSE owner) / sum SST. Interval: 10,000 whole-array draws, seed 20261005 (arrays in sorted identifier order)."
+  }
+ },
+ "randomness": {
+  "a": "folds: frozen registry entries history|<array>|cv|0; subsets: default_rng(20261003) consumed by anatomy.depth_records array by array (sorted identifiers), fold by fold, role, target, k, five draws; released as Fig4a_folds.csv and Fig4a_history_draws.csv",
+  "b": "history subsets deterministic (SHA-256 order); interval default_rng(20261005).integers(0, 12, (10000, 12)) over the arrays in sorted identifier order"
+ },
+ "agreement_with_frozen_outputs": {
+  "depth_records": 1.7763568394002505e-15,
+  "transport_targets": 1.7763568394002505e-15
+ },
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Main/Figure4.pdf",
+   "sha256": "d64866dc2f7be5fa7cc7ff43d6cae63234a4bd10e4493d98a832a6eea0ddb5bd"
+  },
+  "svg": {
+   "file": "02_FIGURES/Main/Figure4.svg",
+   "sha256": "46c5068bbade7d768ba7c08db66c21434277748a4f31dc9fc461595844d54d3f"
+  },
+  "png": {
+   "file": "02_FIGURES/Main/Figure4.png",
+   "sha256": "26df8fd20361d6542cc6db1a7d1719753b44ec7b6da8815608f92573ce1eafe9"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Figure4/Figure4_SourceData.xlsx",
+   "sha256": "76a55c43183aec1193960c5925bf1b2ebb592ccf81c4501f4a2aa7ae280b8122"
+  },
+  "draws": {
+   "file": "04_SOURCE_DATA/Figure4/Fig4a_history_draws.csv",
+   "sha256": "10bc0a300f4e6cafdb5419664899a25d95ef0d1f893274f823fb7038326b2671"
+  },
+  "folds": {
+   "file": "04_SOURCE_DATA/Figure4/Fig4a_folds.csv",
+   "sha256": "cc8f729c68e61c72c7a21d3d31dd9bc3d043b4c7ce1d1aaa8b484b3323be8c7a"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/figure4/figure4_plot_readback.json",
+   "sha256": "013405cb43303888ee053176754e3bd71518d5847be4416a567377ca0ce47187"
+  }
+ }
+}

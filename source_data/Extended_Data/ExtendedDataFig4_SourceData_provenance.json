@@ -1,0 +1,49 @@
+{
+ "figure": "Extended Data Fig. 4 | Either half of a condition library names the same owner",
+ "generated_by": "06_CODE/Figures/ed04.py",
+ "inputs": {
+  "A1": {
+   "file": "05_DATA/Release/00_RAW_IMMUTABLE/DATASET_analysis.csv.gz",
+   "sha256": "e19a6319e0d7976032034e58cb5bd3fcdb31ebbbd3924784f1fbb6305b01d8f2",
+   "rows": 177308
+  },
+  "frozen": {
+   "phase3_halves.csv": {
+    "file": "05_DATA/Results/directional/phase3_halves.csv",
+    "sha256": "9634e946429ee45aa3b63acaf08d58541701fa3a79fe6c4307f08daf8c3a66b7"
+   },
+   "Anatomy_arrays.csv": {
+    "file": "05_DATA/Results/display_inputs/Anatomy_arrays.csv",
+    "sha256": "93f3ccf2f54e8e61aca024fd10cf1154d601d1ceaece4370ccf6de7e90cb493c"
+   }
+  }
+ },
+ "randomness": "none (halves by SHA-256 of the condition identifiers)",
+ "transformation": "Product-forming pairs of each array (gate of the full array). Conditions ordered by the SHA-256 of their identifiers and dealt alternately into halves A and B. In each half and in the full library, both role shares by the estimator of Fig. 1d (condition pattern after an intercept and slope on the condition means; share of a role = mean product of the patterns of pairs sharing only that molecule / mean pattern variance). Margin = share of the full-array owner minus share of its partner; a half names the other role when its margin is below zero.",
+ "halves_agree": 28,
+ "arrays_both_agree": 13,
+ "bh_condition_overlap": 0,
+ "agreement_with_frozen": 9.765951068663181e-17,
+ "outputs": {
+  "pdf": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig4.pdf",
+   "sha256": "8b7b154a2f42861a9aff86732e57332d2eb298f0ddf437663ae98726e4c0bc09"
+  },
+  "svg": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig4.svg",
+   "sha256": "3c6fe439f53aca663c7acb5256b4820504009bfed2eb80cc2a81a4b83eca8b68"
+  },
+  "png": {
+   "file": "02_FIGURES/Extended_Data/ExtendedDataFig4.png",
+   "sha256": "effeccb0155588a378c1e2c2dd78db22fdb1ade096bb5144963c53c7a4d864da"
+  },
+  "xlsx": {
+   "file": "04_SOURCE_DATA/Extended_Data/ExtendedDataFig4_SourceData.xlsx",
+   "sha256": "934e48e70c8bef873342b812123e8b361cbe2f2e3467c265a4b2f9e6cb3ffbbe"
+  },
+  "readback": {
+   "file": "08_REVIEW_AND_QC/extended_data/ed4_plot_readback.json",
+   "sha256": "3dd826ceb24b43be742fa5a34d0fb1c59c9b954b6349c622e7b4c19191e24f49"
+  }
+ }
+}
