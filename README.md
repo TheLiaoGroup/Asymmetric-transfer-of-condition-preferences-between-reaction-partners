@@ -1,4 +1,4 @@
-# Condition preferences belong to the halide in cross-coupling but to the amine in amide coupling: data and code
+# Asymmetric transfer of condition preferences between reaction partners: data and code
 
 This package holds the measurements analysed in the article, the files that fix how they were analysed (frozen analysis plans,
 and the folds, draws and groups the analyses used), the code that produced the figures, and the figures and Source Data
