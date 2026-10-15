@@ -40,18 +40,7 @@
    "citation": "Zhang, C. et al. Chem. Sci. 16, 11809-11822 (2025). doi:10.1039/d5sc03364k"
   },
   "P4": {
-   "output/p4_raw_20261008/R0.csv.gz": "390ab03c7029f0f9f107be84dcf320875b0962a35e6d9b7410ca3ec61acefbd7",
-   "output/p4_all_reactions_20261008/sources/C-O_competitive_reactions/model_input.csv.gz": "467d681a34998750e72cad9afd1d71000b3e19a7c51e738815666609b657fdd2",
-   "output/p4_all_reactions_20261008/sources/Chan-Lam/model_input.csv.gz": "0bce31f7de8b60713c7f814bb2a973f7d14d1781ee8f27336cbead0590b0ee4d",
-   "output/p4_all_reactions_20261008/sources/Esterification/model_input.csv.gz": "359e8fcbc3cae9fc34392743e8ede9f612ba025264357c431406650f971e7854",
-   "output/p4_all_reactions_20261008/sources/Grignard/model_input.csv.gz": "b32724d2e6fadcfd6c8f7acd919f6ec9cef4233f8f34437d9568cfa9f01303c4",
-   "output/p4_all_reactions_20261008/sources/Heck/model_input.csv.gz": "6d8cdb677b79f1805c6ca7daa73507c1d126e673a32eef657771e6b2b6a10f46",
-   "output/p4_all_reactions_20261008/sources/Hiyama/model_input.csv.gz": "c9753c595efea3796ce67337ce296b69a5fab99787bc84ddbd4a31904489bf08",
-   "output/p4_all_reactions_20261008/sources/Kumada/model_input.csv.gz": "2d431958bc49d322f1ff010c1a28cae1f46ac7fc85fe621ad4cafa34144d6f25",
-   "output/p4_all_reactions_20261008/sources/Reductive-amination/model_input.csv.gz": "b4014ffbe7a146b5d9c2874d30cc1246de84b38bd0e44a51c769a6731a81a30a",
-   "output/p4_all_reactions_20261008/sources/SNAr/model_input.csv.gz": "da465217b952403b0c762e1d73fec900fcbabc1fb5d14ab0465e3f1993d005e9",
-   "output/p4_all_reactions_20261008/sources/Sonogashira/model_input.csv.gz": "0120447084dac5c1b8a9c29ef2d63a3a1179fd794a131c04bd4cf95b9cbf2070",
-   "output/p4_all_reactions_20261008/sources/Ullmann/model_input.csv.gz": "f041de81aa9454670eca48f6276b2e3ca7cd7ebf3dfd50970f3298a3bfd5e0cf"
+   "data/p4_records.csv.gz": "dfef7751ca7ea031bf6cbbd57f44ae26204d61c3d336e598d46b5a9932adb639"
   }
  },
  "records": {
@@ -79,7 +68,22 @@
  "p4": {
   "identifier": "p4_row_uid, not part of PROV-1+A2: library, condition label, unordered canonical partners, yield as PROV-1+A2 rounds it; one to one in released order",
   "p4_records_read": 323904,
-  "p4_screens_read": "the screens whose reaction is a library of this release",
+  "p4_screens_read": [
+   "Acylation",
+   "Buchwald-Hartwig",
+   "C-O competitive reactions",
+   "Chan-Lam",
+   "Esterification",
+   "Grignard",
+   "Heck",
+   "Hiyama",
+   "Kumada",
+   "Reductive-amination",
+   "SNAr",
+   "Sonogashira",
+   "Suzuki",
+   "Ullmann"
+  ],
   "p2_with_p4_row_uid": 244436,
   "p2_without": 0
  },

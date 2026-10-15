@@ -11,11 +11,11 @@ Without --p1 (the companion package is not part of this release) nothing is rewr
 rule keys them and compared row for row with the released P2_RECORD_PROVENANCE.csv, and, if the Zhang file is supplied, the
 Zhang flags are recomputed and compared; the companion flags and the counts that involve the companion dataset need its package.
 --p4 names the data package of the yield-prediction study whose released dataset contains every measurement released here
-(ref. 31 of the manuscript). It is read with --p1, and adds p4_row_uid: the record's row_uid in that dataset. Only the screens of
-that package whose reaction is a library of this release are read (its three initial screens and the per-screen folders named
-after one of these libraries); no other screen is opened. That identifier is not part of PROV-1+A2. Its key is the library, the condition label, the two partners as RDKit canonical isomeric SMILES, taken as an
-unordered pair, and the yield rounded as PROV-1+A2 rounds it; records are paired one to one, the k-th record of a key in released
-order with the k-th of that key in the P4 dataset, numeric records in file order.
+(ref. 31 of the manuscript): a folder holding its released records, data/p4_records.csv.gz, as published in its GitHub repository.
+It is read with --p1, and adds p4_row_uid: the record's row_uid in that released file. Only the records whose screen is a library
+of this release are used. That identifier is not part of PROV-1+A2. Its key is the library, the condition label, the two partners
+as RDKit canonical isomeric SMILES, taken as an unordered pair, and the yield rounded as PROV-1+A2 rounds it; records are paired one
+to one, the k-th record of a key in released order with the k-th of that key in the P4 file, in file order.
 """
 import argparse
 import ast
@@ -45,8 +45,7 @@ ZHANG = dict(repository="github.com/aichemeco/amide_coupling", commit="f6fdbe283
              citation="Zhang, C. et al. Chem. Sci. 16, 11809-11822 (2025). doi:10.1039/d5sc03364k")
 UNITS = dict(A1=177308, A3=74, SA1=36498, SB1=30556)
 N = dict(P2=244436, P1=165131, Zhang=47015)
-P4_FILES = ("output/p4_raw_20261008/R0.csv.gz",)
-P4_SOURCES = "output/p4_all_reactions_20261008/sources"
+P4_RECORDS = "data/p4_records.csv.gz"                  # the released records of ref. 31, as in its GitHub repository
 REGIONS = ("P1 only", "P2 only", "Zhang only", "P1 ∩ P2 only", "P1 ∩ Zhang only", "P2 ∩ Zhang only", "P1 ∩ P2 ∩ Zhang")
 NAMES = [f"Reagent{i}_Standardized Name" for i in range(1, 7)]
 SEP = "\x1f"
@@ -172,16 +171,14 @@ def companion(p1, T, lib_of, ROLE, screens_of):
 
 
 def p4_dataset(p4, lib_of):
-    """P4: the numeric records of the yield-prediction study's released dataset, in file order, with their row_uid; only the screens
-    whose reaction is a library of this release (a folder name with '_' for ' ')."""
-    folders = sorted(d.name for d in (p4 / P4_SOURCES).iterdir() if d.is_dir() and d.name.replace("_", " ") in lib_of)
-    files = list(P4_FILES) + [f"{P4_SOURCES}/{d}/model_input.csv.gz" for d in folders]
-    cols = ["row_uid", "reaction", "condition_id", "sub_1_smiles", "sub_2_smiles", "yield_fraction", "include_numeric"]
-    D = pd.concat([pd.read_csv(p4 / f, dtype=str, keep_default_na=False, usecols=cols) for f in files], ignore_index=True)
-    D = D[D.include_numeric == "True"].reset_index(drop=True)
-    assert D.row_uid.is_unique and D.reaction.isin(lib_of.keys()).all(), "a P4 record outside the libraries of this release"
-    D["lib"] = D.reaction.map(lib_of)
-    return D, {f: sha(p4 / f) for f in files}
+    """P4: the numeric records of the yield-prediction study's released file, in file order, with their row_uid; only the screens
+    that are a library of this release."""
+    cols = ["screen", "row_uid", "condition_id", "sub_1_smiles", "sub_2_smiles", "yield_fraction"]
+    D = pd.read_csv(p4 / P4_RECORDS, dtype=str, keep_default_na=False, usecols=cols)
+    assert D.row_uid.is_unique, "a repeated row_uid in the P4 file"
+    D = D[D.screen.isin(lib_of.keys()) & (D.yield_fraction != "")].reset_index(drop=True)
+    D["lib"] = D.screen.map(lib_of)
+    return D, {P4_RECORDS: sha(p4 / P4_RECORDS)}
 
 
 def unordered_key(lib, label, s1, s2, y):
@@ -349,7 +346,7 @@ def main(p1, p4, out=OUT, zhang_file=RAW / "public_amide_reference.csv.gz", cond
         records=N, venn_regions=r, p2_disclosure_counts=counts,
         p4=dict(identifier="p4_row_uid, not part of PROV-1+A2: library, condition label, unordered canonical partners, yield as "
                            "PROV-1+A2 rounds it; one to one in released order",
-                p4_records_read=len(D4), p4_screens_read="the screens whose reaction is a library of this release",
+                p4_records_read=len(D4), p4_screens_read=sorted(D4.screen.unique().tolist()),
                 p2_with_p4_row_uid=n4, p2_without=N["P2"] - n4),
         cross_check=dict(regions_key_by_key_equal_regions_position_by_position=True,
                          per_record_flags_reproduce_every_p2_count=True, yield_guard=g))

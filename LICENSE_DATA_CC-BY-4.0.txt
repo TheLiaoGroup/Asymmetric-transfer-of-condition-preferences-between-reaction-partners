@@ -18,5 +18,5 @@ Not covered: the amide-coupling collection of Zhang et al. and the dataset
 analysed in the companion manuscript. Neither is redistributed in this package;
 its provenance files only record which released measurements match them.
 
-Please cite the article "Reaction-condition knowledge has a molecular owner" and
+Please cite the article "Condition preferences belong to the halide in cross-coupling but to the amine in amide coupling" and
 this dataset.
