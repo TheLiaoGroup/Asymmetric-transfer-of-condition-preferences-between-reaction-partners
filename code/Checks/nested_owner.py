@@ -1,5 +1,5 @@
-"""Owner labels fixed without the scored pair, and ownership within connected pair networks (Bruce, 2026-10-13, '全都做',
-in answer to an external review: the owner label of Fig. 4 came from the full array, which contains the scored pairs; and the
+"""Owner labels fixed without the scored pair, and ownership within connected pair networks.
+The owner label of Fig. 4 came from the full array, which contains the scored pairs; and the
 shares assume that a molecule's sampled partners are exchangeable while 13 of 15 pair networks are not connected).
 
 1 Fig. 4a, nested: in each array-fold the owner is re-estimated from the training pairs of that fold alone (method-of-moments role
